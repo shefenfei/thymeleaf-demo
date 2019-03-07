@@ -27,4 +27,14 @@ public class IndexController {
         maps.put("ddd", indexService.getUser());
         return maps;
     }
+
+
+    @RequestMapping("/test1")
+    public Map<String, Object> index1() {
+        HashMap<String, Object> maps = Maps.newHashMap();
+        maps.put("success", true);
+        maps.put("data" , indexService.testIndex());
+        maps.put("ddd", indexService.getUser());
+        return maps;
+    }
 }
