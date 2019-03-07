@@ -16,6 +16,7 @@ public class IndexController {
 
     public IndexController(IndexService service) {
         this.indexService = service;
+
     }
 
     @RequestMapping("/test")
