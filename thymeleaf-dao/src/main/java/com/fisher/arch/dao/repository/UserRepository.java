@@ -3,16 +3,22 @@ package com.fisher.arch.dao.repository;
 import com.fisher.arch.dao.UserMapper;
 import com.fisher.arch.dao.po.UserPO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
 @Component
 public class UserRepository {
 
     @Autowired
+    private RedisTemplate redisTemplate;
+
+    @Autowired
     private UserMapper userMapper;
 
     public UserPO getUserById(Integer id) {
-        return userMapper.getUserById(id);
+        UserPO user = userMapper.getUserById(id);
+        redisTemplate.opsForValue().set("user" , "userid");
+        return user;
     }
 
 }
