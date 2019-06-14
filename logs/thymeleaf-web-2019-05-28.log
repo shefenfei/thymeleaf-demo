@@ -1,0 +1,820 @@
+2019-05-28 10:28:24.539 [main] INFO  com.fisher.arch.web.ThymeleafApplication - Starting ThymeleafApplication on shefenfeideMacBook-Pro.local with PID 26392 (/Users/shefenfei/Documents/web_workspace/thymeleaf-demo/thymeleaf-web/target/classes started by shefenfei in /Users/shefenfei/Documents/web_workspace/thymeleaf-demo)
+2019-05-28 10:28:24.541 [main] INFO  com.fisher.arch.web.ThymeleafApplication - The following profiles are active: dev
+2019-05-28 10:28:24.612 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6f3f0fae: startup date [Tue May 28 10:28:24 CST 2019]; root of context hierarchy
+2019-05-28 10:28:26.839 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-05-28 10:28:27.615 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$394f755a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-28 10:28:28.164 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2019-05-28 10:28:28.183 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2019-05-28 10:28:28.193 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-05-28 10:28:28.193 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.29
+2019-05-28 10:28:28.198 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/shefenfei/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-05-28 10:28:28.310 [localhost-startStop-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-05-28 10:28:28.310 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3698 ms
+2019-05-28 10:28:29.508 [localhost-startStop-1] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2019-05-28 10:28:29.513 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-05-28 10:28:29.514 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-05-28 10:28:29.514 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-05-28 10:28:29.514 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2019-05-28 10:28:29.514 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpTraceFilter' to: [/*]
+2019-05-28 10:28:29.514 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'webMvcMetricsFilter' to: [/*]
+2019-05-28 10:28:29.514 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'corsFilter' to: [/*]
+2019-05-28 10:28:29.515 [localhost-startStop-1] INFO  o.s.b.a.endpoint.web.ServletEndpointRegistrar - Registered '/actuator/jolokia' to jolokia-actuator-endpoint
+2019-05-28 10:28:30.193 [main] INFO  org.springframework.aop.framework.CglibAopProxy - Final method [final java.util.Map com.fisher.arch.web.controller.IndexController.rewriteUrl1$original$URsDsyTv$accessor$TAhifyXg()] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2019-05-28 10:28:30.194 [main] INFO  org.springframework.aop.framework.CglibAopProxy - Final method [final java.util.Map com.fisher.arch.web.controller.IndexController.getUserById$original$URsDsyTv$accessor$TAhifyXg(java.lang.Integer,java.lang.String,java.lang.String)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2019-05-28 10:28:30.194 [main] INFO  org.springframework.aop.framework.CglibAopProxy - Final method [final java.util.Map com.fisher.arch.web.controller.IndexController.saveUser$original$URsDsyTv$accessor$TAhifyXg(com.fisher.arch.model.form.UserForm)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2019-05-28 10:28:30.194 [main] INFO  org.springframework.aop.framework.CglibAopProxy - Final method [final java.util.Map com.fisher.arch.web.controller.IndexController.rewriteUrl2$original$URsDsyTv$accessor$TAhifyXg()] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2019-05-28 10:28:30.194 [main] INFO  org.springframework.aop.framework.CglibAopProxy - Final method [final java.util.Map com.fisher.arch.web.controller.IndexController.rewriteUrl$original$URsDsyTv$accessor$TAhifyXg()] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2019-05-28 10:28:30.705 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/index/save],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.fisher.arch.web.controller.IndexController.saveUser(com.fisher.arch.model.form.UserForm)
+2019-05-28 10:28:30.707 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/index/getById],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.fisher.arch.web.controller.IndexController.getUserById(java.lang.Integer,java.lang.String,java.lang.String)
+2019-05-28 10:28:30.708 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/index/rewrite],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.fisher.arch.web.controller.IndexController.rewriteUrl()
+2019-05-28 10:28:30.708 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/index/rewrite1],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.fisher.arch.web.controller.IndexController.rewriteUrl1()
+2019-05-28 10:28:30.709 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/index/rewrite2],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.fisher.arch.web.controller.IndexController.rewriteUrl2()
+2019-05-28 10:28:30.710 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-05-28 10:28:30.713 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-05-28 10:28:30.714 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-05-28 10:28:30.715 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-05-28 10:28:30.717 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-05-28 10:28:30.718 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-28 10:28:30.765 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/instances/{instanceId}/actuator/**],methods=[GET || HEAD || POST || PUT || PATCH || DELETE || OPTIONS]}" onto public reactor.core.publisher.Mono<java.lang.Void> de.codecentric.boot.admin.server.web.servlet.InstancesProxyController.endpointProxy(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2019-05-28 10:28:30.775 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/instances],methods=[POST],consumes=[application/json]}" onto public reactor.core.publisher.Mono<org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, de.codecentric.boot.admin.server.domain.values.InstanceId>>> de.codecentric.boot.admin.server.web.InstancesController.register(de.codecentric.boot.admin.server.domain.values.Registration,org.springframework.web.util.UriComponentsBuilder)
+2019-05-28 10:28:30.775 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/instances],methods=[GET],produces=[application/json]}" onto public reactor.core.publisher.Flux<de.codecentric.boot.admin.server.domain.entities.Instance> de.codecentric.boot.admin.server.web.InstancesController.instances(java.lang.String)
+2019-05-28 10:28:30.776 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/instances/{id}],methods=[GET],produces=[application/json]}" onto public reactor.core.publisher.Mono<org.springframework.http.ResponseEntity<de.codecentric.boot.admin.server.domain.entities.Instance>> de.codecentric.boot.admin.server.web.InstancesController.instance(java.lang.String)
+2019-05-28 10:28:30.776 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/instances/events],methods=[GET],produces=[application/json]}" onto public reactor.core.publisher.Flux<de.codecentric.boot.admin.server.domain.events.InstanceEvent> de.codecentric.boot.admin.server.web.InstancesController.events()
+2019-05-28 10:28:30.776 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/instances/{id}],methods=[DELETE]}" onto public reactor.core.publisher.Mono<org.springframework.http.ResponseEntity<java.lang.Void>> de.codecentric.boot.admin.server.web.InstancesController.unregister(java.lang.String)
+2019-05-28 10:28:30.776 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/instances/events],methods=[GET],produces=[text/event-stream]}" onto public reactor.core.publisher.Flux<org.springframework.http.codec.ServerSentEvent<de.codecentric.boot.admin.server.domain.events.InstanceEvent>> de.codecentric.boot.admin.server.web.InstancesController.eventStream()
+2019-05-28 10:28:30.777 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/instances/{id}],methods=[GET],produces=[text/event-stream]}" onto public reactor.core.publisher.Flux<org.springframework.http.codec.ServerSentEvent<de.codecentric.boot.admin.server.domain.entities.Instance>> de.codecentric.boot.admin.server.web.InstancesController.instanceStream(java.lang.String)
+2019-05-28 10:28:30.783 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/applications],methods=[GET],produces=[text/event-stream]}" onto public reactor.core.publisher.Flux<org.springframework.http.codec.ServerSentEvent<de.codecentric.boot.admin.server.web.ApplicationsController$Application>> de.codecentric.boot.admin.server.web.ApplicationsController.applicationsStream()
+2019-05-28 10:28:30.783 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/applications/{name}],methods=[DELETE]}" onto public reactor.core.publisher.Mono<org.springframework.http.ResponseEntity<java.lang.Void>> de.codecentric.boot.admin.server.web.ApplicationsController.unregister(java.lang.String)
+2019-05-28 10:28:30.783 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/applications],methods=[GET],produces=[application/json]}" onto public reactor.core.publisher.Flux<de.codecentric.boot.admin.server.web.ApplicationsController$Application> de.codecentric.boot.admin.server.web.ApplicationsController.applications()
+2019-05-28 10:28:30.785 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/],methods=[GET],produces=[text/html]}" onto public java.lang.String de.codecentric.boot.admin.server.ui.web.UiController.index()
+2019-05-28 10:28:30.786 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/login],methods=[GET],produces=[text/html]}" onto public java.lang.String de.codecentric.boot.admin.server.ui.web.UiController.login()
+2019-05-28 10:28:30.899 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-05-28 10:28:30.911 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/auditevents],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:28:30.913 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/beans],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:28:30.914 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:28:30.914 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/conditions],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:28:30.914 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/configprops],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:28:30.914 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/env],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:28:30.915 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/env/{toMatch}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:28:30.915 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:28:30.915 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/loggers],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:28:30.915 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/loggers/{name}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:28:30.915 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/loggers/{name}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:28:30.915 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/heapdump],methods=[GET],produces=[application/octet-stream]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:28:30.916 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/threaddump],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:28:30.916 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/metrics/{requiredMetricName}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:28:30.916 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/metrics],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:28:30.916 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/scheduledtasks],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:28:30.917 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/httptrace],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:28:30.917 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/mappings],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:28:30.918 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-28 10:28:31.282 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-05-28 10:28:31.403 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6f3f0fae: startup date [Tue May 28 10:28:24 CST 2019]; root of context hierarchy
+2019-05-28 10:28:31.413 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Detected ResponseBodyAdvice bean in wrapperResponseConfig
+2019-05-28 10:28:31.475 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-05-28 10:28:31.476 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-05-28 10:28:31.494 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in restResponseEntityExceptionHandler
+2019-05-28 10:28:31.494 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected ResponseBodyAdvice implementation in wrapperResponseConfig
+2019-05-28 10:28:31.560 [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-05-28 10:28:31.967 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 
+2019-05-28 10:28:38.690 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2019-05-28 10:28:38.691 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-05-28 10:28:38.706 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2019-05-28 10:28:38.716 [main] INFO  o.s.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2019-05-28 10:28:38.716 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-05-28 10:28:38.754 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-05-28 10:28:38.771 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-05-28 10:28:39.120 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2019-05-28 10:28:39.128 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2019-05-28 10:28:39.147 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2019-05-28 10:28:39.154 [main] INFO  com.fisher.arch.web.ThymeleafApplication - Started ThymeleafApplication in 40.218 seconds (JVM running for 49.495)
+2019-05-28 10:28:39.984 [RMI TCP Connection(9)-127.0.0.1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-05-28 10:28:39.984 [RMI TCP Connection(9)-127.0.0.1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2019-05-28 10:28:40.012 [RMI TCP Connection(9)-127.0.0.1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 28 ms
+2019-05-28 10:28:40.194 [RMI TCP Connection(10)-127.0.0.1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-05-28 10:28:59.412 [registrationTask1] WARN  d.c.b.a.client.registration.ApplicationRegistrator - Failed to register application as Application(name=thymeleaf-web-dev, managementUrl=http://10.157.135.18:8081/actuator, healthUrl=http://10.157.135.18:8081/actuator/health, serviceUrl=http://10.157.135.18:8081/) at spring-boot-admin ([http://localhost:8081/instances]): I/O error on POST request for "http://localhost:8081/instances": Read timed out; nested exception is java.net.SocketTimeoutException: Read timed out. Further attempts are logged on DEBUG level
+2019-05-28 10:29:14.813 [registrationTask1] INFO  d.c.b.a.client.registration.ApplicationRegistrator - Application registered itself as 1dd16ea8d96a
+2019-05-28 10:42:11.669 [http-nio-8081-exec-7] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] threw exception
+java.io.IOException: Broken pipe
+	at sun.nio.ch.FileDispatcherImpl.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:47)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:93)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:65)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:471)
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:134)
+	at org.apache.tomcat.util.net.NioBlockingSelector.write(NioBlockingSelector.java:101)
+	at org.apache.tomcat.util.net.NioSelectorPool.write(NioSelectorPool.java:157)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1267)
+	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:670)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flushBlocking(SocketWrapperBase.java:607)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flush(SocketWrapperBase.java:597)
+	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.flush(Http11OutputBuffer.java:646)
+	at org.apache.coyote.http11.filters.ChunkedOutputFilter.flush(ChunkedOutputFilter.java:169)
+	at org.apache.coyote.http11.Http11OutputBuffer.flush(Http11OutputBuffer.java:252)
+	at org.apache.coyote.http11.Http11Processor.flush(Http11Processor.java:1560)
+	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:285)
+	at org.apache.coyote.Response.action(Response.java:173)
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:317)
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:284)
+	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:118)
+	at sun.nio.cs.StreamEncoder.implFlush(StreamEncoder.java:297)
+	at sun.nio.cs.StreamEncoder.flush(StreamEncoder.java:141)
+	at java.io.OutputStreamWriter.flush(OutputStreamWriter.java:229)
+	at org.springframework.util.StreamUtils.copy(StreamUtils.java:121)
+	at org.springframework.http.converter.StringHttpMessageConverter.writeInternal(StringHttpMessageConverter.java:103)
+	at org.springframework.http.converter.StringHttpMessageConverter.writeInternal(StringHttpMessageConverter.java:43)
+	at org.springframework.http.converter.AbstractHttpMessageConverter.write(AbstractHttpMessageConverter.java:224)
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitterReturnValueHandler$HttpMessageConvertingHandler.sendInternal(ResponseBodyEmitterReturnValueHandler.java:199)
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitterReturnValueHandler$HttpMessageConvertingHandler.send(ResponseBodyEmitterReturnValueHandler.java:189)
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter.sendInternal(ResponseBodyEmitter.java:189)
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter.send(ResponseBodyEmitter.java:183)
+	at org.springframework.web.servlet.mvc.method.annotation.SseEmitter.send(SseEmitter.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ReactiveTypeHandler$SseEmitterSubscriber.send(ReactiveTypeHandler.java:341)
+	at org.springframework.web.servlet.mvc.method.annotation.ReactiveTypeHandler$AbstractEmitterSubscriber.run(ReactiveTypeHandler.java:283)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-28 10:42:11.669 [http-nio-8081-exec-7] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+java.io.IOException: Broken pipe
+	at sun.nio.ch.FileDispatcherImpl.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:47)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:93)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:65)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:471)
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:134)
+	at org.apache.tomcat.util.net.NioBlockingSelector.write(NioBlockingSelector.java:101)
+	at org.apache.tomcat.util.net.NioSelectorPool.write(NioSelectorPool.java:157)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1267)
+	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:670)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flushBlocking(SocketWrapperBase.java:607)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flush(SocketWrapperBase.java:597)
+	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.flush(Http11OutputBuffer.java:646)
+	at org.apache.coyote.http11.filters.ChunkedOutputFilter.flush(ChunkedOutputFilter.java:169)
+	at org.apache.coyote.http11.Http11OutputBuffer.flush(Http11OutputBuffer.java:252)
+	at org.apache.coyote.http11.Http11Processor.flush(Http11Processor.java:1560)
+	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:285)
+	at org.apache.coyote.Response.action(Response.java:173)
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:317)
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:284)
+	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:118)
+	at sun.nio.cs.StreamEncoder.implFlush(StreamEncoder.java:297)
+	at sun.nio.cs.StreamEncoder.flush(StreamEncoder.java:141)
+	at java.io.OutputStreamWriter.flush(OutputStreamWriter.java:229)
+	at org.springframework.util.StreamUtils.copy(StreamUtils.java:121)
+	at org.springframework.http.converter.StringHttpMessageConverter.writeInternal(StringHttpMessageConverter.java:103)
+	at org.springframework.http.converter.StringHttpMessageConverter.writeInternal(StringHttpMessageConverter.java:43)
+	at org.springframework.http.converter.AbstractHttpMessageConverter.write(AbstractHttpMessageConverter.java:224)
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitterReturnValueHandler$HttpMessageConvertingHandler.sendInternal(ResponseBodyEmitterReturnValueHandler.java:199)
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitterReturnValueHandler$HttpMessageConvertingHandler.send(ResponseBodyEmitterReturnValueHandler.java:189)
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter.sendInternal(ResponseBodyEmitter.java:189)
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter.send(ResponseBodyEmitter.java:183)
+	at org.springframework.web.servlet.mvc.method.annotation.SseEmitter.send(SseEmitter.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ReactiveTypeHandler$SseEmitterSubscriber.send(ReactiveTypeHandler.java:341)
+	at org.springframework.web.servlet.mvc.method.annotation.ReactiveTypeHandler$AbstractEmitterSubscriber.run(ReactiveTypeHandler.java:283)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-28 10:42:22.413 [http-nio-8081-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - jolokia-actuator-endpoint: No access restrictor found, access to any MBean is allowed
+2019-05-28 10:43:01.268 [http-nio-8081-exec-2] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] threw exception
+java.io.IOException: Broken pipe
+	at sun.nio.ch.FileDispatcherImpl.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:47)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:93)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:65)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:471)
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:134)
+	at org.apache.tomcat.util.net.NioBlockingSelector.write(NioBlockingSelector.java:101)
+	at org.apache.tomcat.util.net.NioSelectorPool.write(NioSelectorPool.java:157)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1267)
+	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:670)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flushBlocking(SocketWrapperBase.java:607)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flush(SocketWrapperBase.java:597)
+	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.flush(Http11OutputBuffer.java:646)
+	at org.apache.coyote.http11.filters.ChunkedOutputFilter.flush(ChunkedOutputFilter.java:169)
+	at org.apache.coyote.http11.Http11OutputBuffer.flush(Http11OutputBuffer.java:252)
+	at org.apache.coyote.http11.Http11Processor.flush(Http11Processor.java:1560)
+	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:285)
+	at org.apache.coyote.Response.action(Response.java:173)
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:317)
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:284)
+	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:118)
+	at sun.nio.cs.StreamEncoder.implFlush(StreamEncoder.java:297)
+	at sun.nio.cs.StreamEncoder.flush(StreamEncoder.java:141)
+	at java.io.OutputStreamWriter.flush(OutputStreamWriter.java:229)
+	at org.springframework.util.StreamUtils.copy(StreamUtils.java:121)
+	at org.springframework.http.converter.StringHttpMessageConverter.writeInternal(StringHttpMessageConverter.java:103)
+	at org.springframework.http.converter.StringHttpMessageConverter.writeInternal(StringHttpMessageConverter.java:43)
+	at org.springframework.http.converter.AbstractHttpMessageConverter.write(AbstractHttpMessageConverter.java:224)
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitterReturnValueHandler$HttpMessageConvertingHandler.sendInternal(ResponseBodyEmitterReturnValueHandler.java:199)
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitterReturnValueHandler$HttpMessageConvertingHandler.send(ResponseBodyEmitterReturnValueHandler.java:189)
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter.sendInternal(ResponseBodyEmitter.java:189)
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter.send(ResponseBodyEmitter.java:183)
+	at org.springframework.web.servlet.mvc.method.annotation.SseEmitter.send(SseEmitter.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ReactiveTypeHandler$SseEmitterSubscriber.send(ReactiveTypeHandler.java:341)
+	at org.springframework.web.servlet.mvc.method.annotation.ReactiveTypeHandler$AbstractEmitterSubscriber.run(ReactiveTypeHandler.java:283)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-28 10:43:01.269 [http-nio-8081-exec-2] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+java.io.IOException: Broken pipe
+	at sun.nio.ch.FileDispatcherImpl.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:47)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:93)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:65)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:471)
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:134)
+	at org.apache.tomcat.util.net.NioBlockingSelector.write(NioBlockingSelector.java:101)
+	at org.apache.tomcat.util.net.NioSelectorPool.write(NioSelectorPool.java:157)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1267)
+	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:670)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flushBlocking(SocketWrapperBase.java:607)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flush(SocketWrapperBase.java:597)
+	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.flush(Http11OutputBuffer.java:646)
+	at org.apache.coyote.http11.filters.ChunkedOutputFilter.flush(ChunkedOutputFilter.java:169)
+	at org.apache.coyote.http11.Http11OutputBuffer.flush(Http11OutputBuffer.java:252)
+	at org.apache.coyote.http11.Http11Processor.flush(Http11Processor.java:1560)
+	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:285)
+	at org.apache.coyote.Response.action(Response.java:173)
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:317)
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:284)
+	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:118)
+	at sun.nio.cs.StreamEncoder.implFlush(StreamEncoder.java:297)
+	at sun.nio.cs.StreamEncoder.flush(StreamEncoder.java:141)
+	at java.io.OutputStreamWriter.flush(OutputStreamWriter.java:229)
+	at org.springframework.util.StreamUtils.copy(StreamUtils.java:121)
+	at org.springframework.http.converter.StringHttpMessageConverter.writeInternal(StringHttpMessageConverter.java:103)
+	at org.springframework.http.converter.StringHttpMessageConverter.writeInternal(StringHttpMessageConverter.java:43)
+	at org.springframework.http.converter.AbstractHttpMessageConverter.write(AbstractHttpMessageConverter.java:224)
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitterReturnValueHandler$HttpMessageConvertingHandler.sendInternal(ResponseBodyEmitterReturnValueHandler.java:199)
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitterReturnValueHandler$HttpMessageConvertingHandler.send(ResponseBodyEmitterReturnValueHandler.java:189)
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter.sendInternal(ResponseBodyEmitter.java:189)
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter.send(ResponseBodyEmitter.java:183)
+	at org.springframework.web.servlet.mvc.method.annotation.SseEmitter.send(SseEmitter.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ReactiveTypeHandler$SseEmitterSubscriber.send(ReactiveTypeHandler.java:341)
+	at org.springframework.web.servlet.mvc.method.annotation.ReactiveTypeHandler$AbstractEmitterSubscriber.run(ReactiveTypeHandler.java:283)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-28 10:49:20.052 [Thread-95] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6f3f0fae: startup date [Tue May 28 10:28:24 CST 2019]; root of context hierarchy
+2019-05-28 10:49:20.057 [Thread-95] INFO  o.s.context.support.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+2019-05-28 10:49:20.058 [Thread-95] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-05-28 10:49:20.059 [Thread-95] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2019-05-28 10:49:20.066 [Thread-95] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService
+2019-05-28 10:49:20.071 [Thread-95] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-05-28 10:55:42.105 [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@4cc36c19: startup date [Tue May 28 10:55:42 CST 2019]; root of context hierarchy
+2019-05-28 10:55:42.551 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$2cafbbd9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-28 10:55:52.922 [main] INFO  com.fisher.arch.web.ThymeleafApplication - The following profiles are active: dev
+2019-05-28 10:55:52.950 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@31c7c281: startup date [Tue May 28 10:55:52 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@4cc36c19
+2019-05-28 10:55:54.957 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-05-28 10:55:55.609 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=0eb49cf9-d8a1-35e5-bfdd-2015716b1d2b
+2019-05-28 10:55:56.080 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1095b8dc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-28 10:55:56.205 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$2cafbbd9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-28 10:55:56.662 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2019-05-28 10:55:56.684 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2019-05-28 10:55:56.699 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-05-28 10:55:56.700 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.29
+2019-05-28 10:55:56.704 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/shefenfei/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-05-28 10:55:56.828 [localhost-startStop-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-05-28 10:55:56.829 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3879 ms
+2019-05-28 10:55:59.186 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-05-28 10:55:59.187 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'tracingFilter' to: [/*]
+2019-05-28 10:55:59.187 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'exceptionLoggingFilter' to: [/*]
+2019-05-28 10:55:59.187 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-05-28 10:55:59.187 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-05-28 10:55:59.187 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2019-05-28 10:55:59.187 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpTraceFilter' to: [/*]
+2019-05-28 10:55:59.187 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'webMvcMetricsFilter' to: [/*]
+2019-05-28 10:55:59.188 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'corsFilter' to: [/*]
+2019-05-28 10:55:59.188 [localhost-startStop-1] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2019-05-28 10:55:59.189 [localhost-startStop-1] INFO  o.s.b.a.endpoint.web.ServletEndpointRegistrar - Registered '/actuator/jolokia' to jolokia-actuator-endpoint
+2019-05-28 10:55:59.986 [main] INFO  org.springframework.aop.framework.CglibAopProxy - Final method [final java.util.Map com.fisher.arch.web.controller.IndexController.rewriteUrl2$original$javv5MAK$accessor$62B0wQiK()] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2019-05-28 10:55:59.986 [main] INFO  org.springframework.aop.framework.CglibAopProxy - Final method [final java.util.Map com.fisher.arch.web.controller.IndexController.saveUser$original$javv5MAK$accessor$62B0wQiK(com.fisher.arch.model.form.UserForm)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2019-05-28 10:55:59.986 [main] INFO  org.springframework.aop.framework.CglibAopProxy - Final method [final java.util.Map com.fisher.arch.web.controller.IndexController.rewriteUrl1$original$javv5MAK$accessor$62B0wQiK()] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2019-05-28 10:55:59.986 [main] INFO  org.springframework.aop.framework.CglibAopProxy - Final method [final java.util.Map com.fisher.arch.web.controller.IndexController.getUserById$original$javv5MAK$accessor$62B0wQiK(java.lang.Integer,java.lang.String,java.lang.String)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2019-05-28 10:55:59.986 [main] INFO  org.springframework.aop.framework.CglibAopProxy - Final method [final java.util.Map com.fisher.arch.web.controller.IndexController.rewriteUrl$original$javv5MAK$accessor$62B0wQiK()] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2019-05-28 10:56:01.006 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/index/save],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.fisher.arch.web.controller.IndexController.saveUser(com.fisher.arch.model.form.UserForm)
+2019-05-28 10:56:01.008 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/index/getById],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.fisher.arch.web.controller.IndexController.getUserById(java.lang.Integer,java.lang.String,java.lang.String)
+2019-05-28 10:56:01.008 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/index/rewrite],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.fisher.arch.web.controller.IndexController.rewriteUrl()
+2019-05-28 10:56:01.008 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/index/rewrite1],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.fisher.arch.web.controller.IndexController.rewriteUrl1()
+2019-05-28 10:56:01.009 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/index/rewrite2],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.fisher.arch.web.controller.IndexController.rewriteUrl2()
+2019-05-28 10:56:01.009 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-05-28 10:56:01.012 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-05-28 10:56:01.013 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-05-28 10:56:01.014 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-05-28 10:56:01.017 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-05-28 10:56:01.017 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-28 10:56:01.098 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/instances/{instanceId}/actuator/**],methods=[GET || HEAD || POST || PUT || PATCH || DELETE || OPTIONS]}" onto public reactor.core.publisher.Mono<java.lang.Void> de.codecentric.boot.admin.server.web.servlet.InstancesProxyController.endpointProxy(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2019-05-28 10:56:01.106 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/instances],methods=[POST],consumes=[application/json]}" onto public reactor.core.publisher.Mono<org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, de.codecentric.boot.admin.server.domain.values.InstanceId>>> de.codecentric.boot.admin.server.web.InstancesController.register(de.codecentric.boot.admin.server.domain.values.Registration,org.springframework.web.util.UriComponentsBuilder)
+2019-05-28 10:56:01.107 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/instances/{id}],methods=[GET],produces=[application/json]}" onto public reactor.core.publisher.Mono<org.springframework.http.ResponseEntity<de.codecentric.boot.admin.server.domain.entities.Instance>> de.codecentric.boot.admin.server.web.InstancesController.instance(java.lang.String)
+2019-05-28 10:56:01.107 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/instances],methods=[GET],produces=[application/json]}" onto public reactor.core.publisher.Flux<de.codecentric.boot.admin.server.domain.entities.Instance> de.codecentric.boot.admin.server.web.InstancesController.instances(java.lang.String)
+2019-05-28 10:56:01.107 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/instances/events],methods=[GET],produces=[application/json]}" onto public reactor.core.publisher.Flux<de.codecentric.boot.admin.server.domain.events.InstanceEvent> de.codecentric.boot.admin.server.web.InstancesController.events()
+2019-05-28 10:56:01.107 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/instances/{id}],methods=[DELETE]}" onto public reactor.core.publisher.Mono<org.springframework.http.ResponseEntity<java.lang.Void>> de.codecentric.boot.admin.server.web.InstancesController.unregister(java.lang.String)
+2019-05-28 10:56:01.108 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/instances/events],methods=[GET],produces=[text/event-stream]}" onto public reactor.core.publisher.Flux<org.springframework.http.codec.ServerSentEvent<de.codecentric.boot.admin.server.domain.events.InstanceEvent>> de.codecentric.boot.admin.server.web.InstancesController.eventStream()
+2019-05-28 10:56:01.108 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/instances/{id}],methods=[GET],produces=[text/event-stream]}" onto public reactor.core.publisher.Flux<org.springframework.http.codec.ServerSentEvent<de.codecentric.boot.admin.server.domain.entities.Instance>> de.codecentric.boot.admin.server.web.InstancesController.instanceStream(java.lang.String)
+2019-05-28 10:56:01.113 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/applications/{name}],methods=[DELETE]}" onto public reactor.core.publisher.Mono<org.springframework.http.ResponseEntity<java.lang.Void>> de.codecentric.boot.admin.server.web.ApplicationsController.unregister(java.lang.String)
+2019-05-28 10:56:01.113 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/applications],methods=[GET],produces=[text/event-stream]}" onto public reactor.core.publisher.Flux<org.springframework.http.codec.ServerSentEvent<de.codecentric.boot.admin.server.web.ApplicationsController$Application>> de.codecentric.boot.admin.server.web.ApplicationsController.applicationsStream()
+2019-05-28 10:56:01.113 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/applications],methods=[GET],produces=[application/json]}" onto public reactor.core.publisher.Flux<de.codecentric.boot.admin.server.web.ApplicationsController$Application> de.codecentric.boot.admin.server.web.ApplicationsController.applications()
+2019-05-28 10:56:01.116 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/],methods=[GET],produces=[text/html]}" onto public java.lang.String de.codecentric.boot.admin.server.ui.web.UiController.index()
+2019-05-28 10:56:01.116 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/login],methods=[GET],produces=[text/html]}" onto public java.lang.String de.codecentric.boot.admin.server.ui.web.UiController.login()
+2019-05-28 10:56:01.293 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 17 endpoint(s) beneath base path '/actuator'
+2019-05-28 10:56:01.311 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/auditevents],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:56:01.313 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/beans],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:56:01.313 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:56:01.313 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/conditions],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:56:01.314 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/configprops],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:56:01.314 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/env],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:56:01.314 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/env/{toMatch}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:56:01.314 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/env],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v2+json || application/json],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:56:01.314 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/env],methods=[DELETE],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:56:01.314 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:56:01.314 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/loggers],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:56:01.315 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/loggers/{name}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:56:01.315 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/loggers/{name}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:56:01.315 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/heapdump],methods=[GET],produces=[application/octet-stream]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:56:01.315 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/threaddump],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:56:01.315 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/metrics/{requiredMetricName}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:56:01.315 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/metrics],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:56:01.315 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/scheduledtasks],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:56:01.316 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/httptrace],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:56:01.316 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/mappings],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:56:01.316 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/refresh],methods=[POST],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:56:01.316 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/features],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 10:56:01.317 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-28 10:56:01.917 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-05-28 10:56:02.109 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@31c7c281: startup date [Tue May 28 10:55:52 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@4cc36c19
+2019-05-28 10:56:02.126 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Detected ResponseBodyAdvice bean in wrapperResponseConfig
+2019-05-28 10:56:02.255 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-05-28 10:56:02.255 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-05-28 10:56:02.299 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in restResponseEntityExceptionHandler
+2019-05-28 10:56:02.299 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected ResponseBodyAdvice implementation in wrapperResponseConfig
+2019-05-28 10:56:02.435 [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-05-28 10:56:02.758 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 
+2019-05-28 10:56:09.971 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2019-05-28 10:56:09.973 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-05-28 10:56:09.988 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'environmentManager' has been autodetected for JMX exposure
+2019-05-28 10:56:09.990 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'refreshScope' has been autodetected for JMX exposure
+2019-05-28 10:56:09.991 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+2019-05-28 10:56:09.996 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+2019-05-28 10:56:10.009 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+2019-05-28 10:56:10.020 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=31c7c281,type=ConfigurationPropertiesRebinder]
+2019-05-28 10:56:10.027 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2019-05-28 10:56:10.037 [main] INFO  o.s.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2019-05-28 10:56:10.037 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-05-28 10:56:10.074 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-05-28 10:56:10.093 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-05-28 10:56:10.486 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2019-05-28 10:56:10.496 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2019-05-28 10:56:10.522 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2019-05-28 10:56:10.530 [main] INFO  com.fisher.arch.web.ThymeleafApplication - Started ThymeleafApplication in 43.962 seconds (JVM running for 51.853)
+2019-05-28 10:56:11.326 [RMI TCP Connection(4)-127.0.0.1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-05-28 10:56:11.326 [RMI TCP Connection(4)-127.0.0.1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2019-05-28 10:56:11.365 [RMI TCP Connection(4)-127.0.0.1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 38 ms
+2019-05-28 10:56:11.665 [RMI TCP Connection(9)-127.0.0.1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-05-28 10:56:30.814 [registrationTask1] WARN  d.c.b.a.client.registration.ApplicationRegistrator - Failed to register application as Application(name=thymeleaf-web-dev, managementUrl=http://10.157.135.18:8081/actuator, healthUrl=http://10.157.135.18:8081/actuator/health, serviceUrl=http://10.157.135.18:8081/) at spring-boot-admin ([http://localhost:8081/instances]): I/O error on POST request for "http://localhost:8081/instances": Read timed out; nested exception is java.net.SocketTimeoutException: Read timed out. Further attempts are logged on DEBUG level
+2019-05-28 10:56:46.426 [registrationTask1] INFO  d.c.b.a.client.registration.ApplicationRegistrator - Application registered itself as 1dd16ea8d96a
+2019-05-28 10:57:46.151 [http-nio-8081-exec-7] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method begin : getUserById, 参数: [1, adad, null], Kind :method-execution 
+2019-05-28 10:57:46.189 [http-nio-8081-exec-7] DEBUG com.fisher.arch.dao.UserMapper.getUserById - ==>  Preparing: SELECT id, username, pass FROM test_tb WHERE id = ?; 
+2019-05-28 10:57:46.230 [http-nio-8081-exec-7] DEBUG com.fisher.arch.dao.UserMapper.getUserById - ==> Parameters: 1(Integer)
+2019-05-28 10:57:46.265 [http-nio-8081-exec-7] DEBUG com.fisher.arch.dao.UserMapper.getUserById - <==      Total: 1
+2019-05-28 10:57:46.269 [http-nio-8081-exec-7] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method end : getUserById
+2019-05-28 10:57:47.226 [http-nio-8081-exec-9] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method begin : getUserById, 参数: [1, adad, null], Kind :method-execution 
+2019-05-28 10:57:47.228 [http-nio-8081-exec-9] DEBUG com.fisher.arch.dao.UserMapper.getUserById - ==>  Preparing: SELECT id, username, pass FROM test_tb WHERE id = ?; 
+2019-05-28 10:57:47.228 [http-nio-8081-exec-9] DEBUG com.fisher.arch.dao.UserMapper.getUserById - ==> Parameters: 1(Integer)
+2019-05-28 10:57:47.229 [http-nio-8081-exec-9] DEBUG com.fisher.arch.dao.UserMapper.getUserById - <==      Total: 1
+2019-05-28 10:57:47.231 [http-nio-8081-exec-9] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method end : getUserById
+2019-05-28 10:57:47.968 [http-nio-8081-exec-10] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method begin : getUserById, 参数: [1, adad, null], Kind :method-execution 
+2019-05-28 10:57:47.969 [http-nio-8081-exec-10] DEBUG com.fisher.arch.dao.UserMapper.getUserById - ==>  Preparing: SELECT id, username, pass FROM test_tb WHERE id = ?; 
+2019-05-28 10:57:47.969 [http-nio-8081-exec-10] DEBUG com.fisher.arch.dao.UserMapper.getUserById - ==> Parameters: 1(Integer)
+2019-05-28 10:57:47.970 [http-nio-8081-exec-10] DEBUG com.fisher.arch.dao.UserMapper.getUserById - <==      Total: 1
+2019-05-28 10:57:47.971 [http-nio-8081-exec-10] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method end : getUserById
+2019-05-28 10:57:48.545 [http-nio-8081-exec-1] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method begin : getUserById, 参数: [1, adad, null], Kind :method-execution 
+2019-05-28 10:57:48.546 [http-nio-8081-exec-1] DEBUG com.fisher.arch.dao.UserMapper.getUserById - ==>  Preparing: SELECT id, username, pass FROM test_tb WHERE id = ?; 
+2019-05-28 10:57:48.546 [http-nio-8081-exec-1] DEBUG com.fisher.arch.dao.UserMapper.getUserById - ==> Parameters: 1(Integer)
+2019-05-28 10:57:48.547 [http-nio-8081-exec-1] DEBUG com.fisher.arch.dao.UserMapper.getUserById - <==      Total: 1
+2019-05-28 10:57:48.548 [http-nio-8081-exec-1] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method end : getUserById
+2019-05-28 10:57:49.009 [http-nio-8081-exec-2] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method begin : getUserById, 参数: [1, adad, null], Kind :method-execution 
+2019-05-28 10:57:49.010 [http-nio-8081-exec-2] DEBUG com.fisher.arch.dao.UserMapper.getUserById - ==>  Preparing: SELECT id, username, pass FROM test_tb WHERE id = ?; 
+2019-05-28 10:57:49.010 [http-nio-8081-exec-2] DEBUG com.fisher.arch.dao.UserMapper.getUserById - ==> Parameters: 1(Integer)
+2019-05-28 10:57:49.011 [http-nio-8081-exec-2] DEBUG com.fisher.arch.dao.UserMapper.getUserById - <==      Total: 1
+2019-05-28 10:57:49.012 [http-nio-8081-exec-2] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method end : getUserById
+2019-05-28 10:57:49.332 [http-nio-8081-exec-3] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method begin : getUserById, 参数: [1, adad, null], Kind :method-execution 
+2019-05-28 10:57:49.334 [http-nio-8081-exec-3] DEBUG com.fisher.arch.dao.UserMapper.getUserById - ==>  Preparing: SELECT id, username, pass FROM test_tb WHERE id = ?; 
+2019-05-28 10:57:49.334 [http-nio-8081-exec-3] DEBUG com.fisher.arch.dao.UserMapper.getUserById - ==> Parameters: 1(Integer)
+2019-05-28 10:57:49.335 [http-nio-8081-exec-3] DEBUG com.fisher.arch.dao.UserMapper.getUserById - <==      Total: 1
+2019-05-28 10:57:49.336 [http-nio-8081-exec-3] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method end : getUserById
+2019-05-28 10:59:42.710 [http-nio-8081-exec-7] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method begin : getUserById, 参数: [1, adad, null], Kind :method-execution 
+2019-05-28 10:59:42.711 [http-nio-8081-exec-7] DEBUG com.fisher.arch.dao.UserMapper.getUserById - ==>  Preparing: SELECT id, username, pass FROM test_tb WHERE id = ?; 
+2019-05-28 10:59:42.711 [http-nio-8081-exec-7] DEBUG com.fisher.arch.dao.UserMapper.getUserById - ==> Parameters: 1(Integer)
+2019-05-28 10:59:42.712 [http-nio-8081-exec-7] DEBUG com.fisher.arch.dao.UserMapper.getUserById - <==      Total: 1
+2019-05-28 10:59:42.713 [http-nio-8081-exec-7] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method end : getUserById
+2019-05-28 11:00:33.343 [http-nio-8081-exec-7] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method begin : getUserById, 参数: [999, adad, null], Kind :method-execution 
+2019-05-28 11:00:33.344 [http-nio-8081-exec-7] DEBUG com.fisher.arch.dao.UserMapper.getUserById - ==>  Preparing: SELECT id, username, pass FROM test_tb WHERE id = ?; 
+2019-05-28 11:00:33.345 [http-nio-8081-exec-7] DEBUG com.fisher.arch.dao.UserMapper.getUserById - ==> Parameters: 999(Integer)
+2019-05-28 11:00:33.345 [http-nio-8081-exec-7] DEBUG com.fisher.arch.dao.UserMapper.getUserById - <==      Total: 0
+2019-05-28 11:00:33.345 [http-nio-8081-exec-7] INFO  com.fisher.arch.dao.repository.UserRepository - 会员为 ：null ，数据不存在!
+2019-05-28 11:00:33.347 [http-nio-8081-exec-7] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method end : getUserById
+2019-05-28 11:01:36.449 [http-nio-8081-exec-2] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method begin : getUserById, 参数: [null, adad, null], Kind :method-execution 
+2019-05-28 11:01:36.450 [http-nio-8081-exec-2] DEBUG com.fisher.arch.dao.UserMapper.getUserById - ==>  Preparing: SELECT id, username, pass FROM test_tb WHERE id = ?; 
+2019-05-28 11:01:36.450 [http-nio-8081-exec-2] DEBUG com.fisher.arch.dao.UserMapper.getUserById - ==> Parameters: null
+2019-05-28 11:01:36.455 [http-nio-8081-exec-2] DEBUG com.fisher.arch.dao.UserMapper.getUserById - <==      Total: 0
+2019-05-28 11:01:36.455 [http-nio-8081-exec-2] INFO  com.fisher.arch.dao.repository.UserRepository - 会员为 ：null ，数据不存在!
+2019-05-28 11:01:36.456 [http-nio-8081-exec-2] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method end : getUserById
+2019-05-28 11:18:49.909 [Thread-105] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@31c7c281: startup date [Tue May 28 10:55:52 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@4cc36c19
+2019-05-28 11:18:49.914 [Thread-105] INFO  o.s.context.support.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+2019-05-28 11:18:49.922 [Thread-105] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-05-28 11:18:49.922 [Thread-105] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2019-05-28 11:18:49.934 [Thread-105] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService
+2019-05-28 11:18:49.945 [Thread-105] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-05-28 11:19:29.690 [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7a360554: startup date [Tue May 28 11:19:29 CST 2019]; root of context hierarchy
+2019-05-28 11:19:30.130 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$cfcabbcf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-28 11:19:40.480 [main] INFO  com.fisher.arch.web.ThymeleafApplication - The following profiles are active: dev
+2019-05-28 11:19:40.507 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5d92e8e2: startup date [Tue May 28 11:19:40 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@7a360554
+2019-05-28 11:19:42.483 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-05-28 11:19:43.114 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=0eb49cf9-d8a1-35e5-bfdd-2015716b1d2b
+2019-05-28 11:19:43.585 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b3b0b8d2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-28 11:19:43.677 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$cfcabbcf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-28 11:19:44.129 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2019-05-28 11:19:44.148 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2019-05-28 11:19:44.162 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-05-28 11:19:44.162 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.29
+2019-05-28 11:19:44.167 [localhost-startStop-1] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/shefenfei/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-05-28 11:19:44.289 [localhost-startStop-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-05-28 11:19:44.289 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3782 ms
+2019-05-28 11:19:46.522 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-05-28 11:19:46.522 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'tracingFilter' to: [/*]
+2019-05-28 11:19:46.523 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'exceptionLoggingFilter' to: [/*]
+2019-05-28 11:19:46.523 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-05-28 11:19:46.523 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-05-28 11:19:46.523 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2019-05-28 11:19:46.523 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpTraceFilter' to: [/*]
+2019-05-28 11:19:46.523 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'webMvcMetricsFilter' to: [/*]
+2019-05-28 11:19:46.523 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'corsFilter' to: [/*]
+2019-05-28 11:19:46.523 [localhost-startStop-1] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2019-05-28 11:19:46.525 [localhost-startStop-1] INFO  o.s.b.a.endpoint.web.ServletEndpointRegistrar - Registered '/actuator/jolokia' to jolokia-actuator-endpoint
+2019-05-28 11:19:47.218 [main] INFO  org.springframework.aop.framework.CglibAopProxy - Final method [final java.util.Map com.fisher.arch.web.controller.IndexController.rewriteUrl$original$78f9hrOU$accessor$AHIo2cwi()] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2019-05-28 11:19:47.218 [main] INFO  org.springframework.aop.framework.CglibAopProxy - Final method [final java.util.Map com.fisher.arch.web.controller.IndexController.rewriteUrl1$original$78f9hrOU$accessor$AHIo2cwi()] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2019-05-28 11:19:47.218 [main] INFO  org.springframework.aop.framework.CglibAopProxy - Final method [final java.util.Map com.fisher.arch.web.controller.IndexController.rewriteUrl2$original$78f9hrOU$accessor$AHIo2cwi()] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2019-05-28 11:19:47.218 [main] INFO  org.springframework.aop.framework.CglibAopProxy - Final method [final java.util.Map com.fisher.arch.web.controller.IndexController.saveUser$original$78f9hrOU$accessor$AHIo2cwi(com.fisher.arch.model.form.UserForm)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2019-05-28 11:19:47.219 [main] INFO  org.springframework.aop.framework.CglibAopProxy - Final method [final java.util.Map com.fisher.arch.web.controller.IndexController.getUserById$original$78f9hrOU$accessor$AHIo2cwi(java.lang.Integer,java.lang.String,java.lang.String)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2019-05-28 11:19:48.192 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/index/save],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.fisher.arch.web.controller.IndexController.saveUser(com.fisher.arch.model.form.UserForm)
+2019-05-28 11:19:48.195 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/index/getById],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.fisher.arch.web.controller.IndexController.getUserById(java.lang.Integer,java.lang.String,java.lang.String)
+2019-05-28 11:19:48.195 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/index/rewrite],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.fisher.arch.web.controller.IndexController.rewriteUrl()
+2019-05-28 11:19:48.195 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/index/rewrite1],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.fisher.arch.web.controller.IndexController.rewriteUrl1()
+2019-05-28 11:19:48.196 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/index/rewrite2],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.fisher.arch.web.controller.IndexController.rewriteUrl2()
+2019-05-28 11:19:48.196 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-05-28 11:19:48.199 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-05-28 11:19:48.200 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-05-28 11:19:48.201 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-05-28 11:19:48.204 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-05-28 11:19:48.204 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-28 11:19:48.281 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/instances/{instanceId}/actuator/**],methods=[GET || HEAD || POST || PUT || PATCH || DELETE || OPTIONS]}" onto public reactor.core.publisher.Mono<java.lang.Void> de.codecentric.boot.admin.server.web.servlet.InstancesProxyController.endpointProxy(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2019-05-28 11:19:48.290 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/instances],methods=[POST],consumes=[application/json]}" onto public reactor.core.publisher.Mono<org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, de.codecentric.boot.admin.server.domain.values.InstanceId>>> de.codecentric.boot.admin.server.web.InstancesController.register(de.codecentric.boot.admin.server.domain.values.Registration,org.springframework.web.util.UriComponentsBuilder)
+2019-05-28 11:19:48.290 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/instances/events],methods=[GET],produces=[application/json]}" onto public reactor.core.publisher.Flux<de.codecentric.boot.admin.server.domain.events.InstanceEvent> de.codecentric.boot.admin.server.web.InstancesController.events()
+2019-05-28 11:19:48.291 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/instances/{id}],methods=[DELETE]}" onto public reactor.core.publisher.Mono<org.springframework.http.ResponseEntity<java.lang.Void>> de.codecentric.boot.admin.server.web.InstancesController.unregister(java.lang.String)
+2019-05-28 11:19:48.291 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/instances/{id}],methods=[GET],produces=[application/json]}" onto public reactor.core.publisher.Mono<org.springframework.http.ResponseEntity<de.codecentric.boot.admin.server.domain.entities.Instance>> de.codecentric.boot.admin.server.web.InstancesController.instance(java.lang.String)
+2019-05-28 11:19:48.291 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/instances],methods=[GET],produces=[application/json]}" onto public reactor.core.publisher.Flux<de.codecentric.boot.admin.server.domain.entities.Instance> de.codecentric.boot.admin.server.web.InstancesController.instances(java.lang.String)
+2019-05-28 11:19:48.291 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/instances/events],methods=[GET],produces=[text/event-stream]}" onto public reactor.core.publisher.Flux<org.springframework.http.codec.ServerSentEvent<de.codecentric.boot.admin.server.domain.events.InstanceEvent>> de.codecentric.boot.admin.server.web.InstancesController.eventStream()
+2019-05-28 11:19:48.291 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/instances/{id}],methods=[GET],produces=[text/event-stream]}" onto public reactor.core.publisher.Flux<org.springframework.http.codec.ServerSentEvent<de.codecentric.boot.admin.server.domain.entities.Instance>> de.codecentric.boot.admin.server.web.InstancesController.instanceStream(java.lang.String)
+2019-05-28 11:19:48.297 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/applications/{name}],methods=[DELETE]}" onto public reactor.core.publisher.Mono<org.springframework.http.ResponseEntity<java.lang.Void>> de.codecentric.boot.admin.server.web.ApplicationsController.unregister(java.lang.String)
+2019-05-28 11:19:48.297 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/applications],methods=[GET],produces=[application/json]}" onto public reactor.core.publisher.Flux<de.codecentric.boot.admin.server.web.ApplicationsController$Application> de.codecentric.boot.admin.server.web.ApplicationsController.applications()
+2019-05-28 11:19:48.297 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/applications],methods=[GET],produces=[text/event-stream]}" onto public reactor.core.publisher.Flux<org.springframework.http.codec.ServerSentEvent<de.codecentric.boot.admin.server.web.ApplicationsController$Application>> de.codecentric.boot.admin.server.web.ApplicationsController.applicationsStream()
+2019-05-28 11:19:48.300 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/],methods=[GET],produces=[text/html]}" onto public java.lang.String de.codecentric.boot.admin.server.ui.web.UiController.index()
+2019-05-28 11:19:48.300 [main] INFO  d.c.b.a.s.w.servlet.AdminControllerHandlerMapping - Mapped "{[/login],methods=[GET],produces=[text/html]}" onto public java.lang.String de.codecentric.boot.admin.server.ui.web.UiController.login()
+2019-05-28 11:19:48.480 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 17 endpoint(s) beneath base path '/actuator'
+2019-05-28 11:19:48.497 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/auditevents],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 11:19:48.499 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/beans],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 11:19:48.499 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 11:19:48.499 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/conditions],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 11:19:48.499 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/configprops],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 11:19:48.499 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/env],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 11:19:48.499 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/env/{toMatch}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 11:19:48.500 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/env],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v2+json || application/json],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 11:19:48.500 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/env],methods=[DELETE],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 11:19:48.500 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 11:19:48.500 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/loggers],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 11:19:48.500 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/loggers/{name}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 11:19:48.500 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/loggers/{name}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 11:19:48.500 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/heapdump],methods=[GET],produces=[application/octet-stream]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 11:19:48.501 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/threaddump],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 11:19:48.501 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/metrics/{requiredMetricName}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 11:19:48.501 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/metrics],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 11:19:48.501 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/scheduledtasks],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 11:19:48.501 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/httptrace],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 11:19:48.501 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/mappings],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 11:19:48.501 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/refresh],methods=[POST],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 11:19:48.501 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/features],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2019-05-28 11:19:48.502 [main] INFO  o.s.b.a.e.web.servlet.WebMvcEndpointHandlerMapping - Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-05-28 11:19:49.078 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-05-28 11:19:49.261 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5d92e8e2: startup date [Tue May 28 11:19:40 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@7a360554
+2019-05-28 11:19:49.278 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Detected ResponseBodyAdvice bean in wrapperResponseConfig
+2019-05-28 11:19:49.385 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-05-28 11:19:49.385 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-05-28 11:19:49.425 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in restResponseEntityExceptionHandler
+2019-05-28 11:19:49.425 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected ResponseBodyAdvice implementation in wrapperResponseConfig
+2019-05-28 11:19:49.537 [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-05-28 11:19:49.857 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 
+2019-05-28 11:19:56.926 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2019-05-28 11:19:56.929 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-05-28 11:19:56.941 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'environmentManager' has been autodetected for JMX exposure
+2019-05-28 11:19:56.943 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'refreshScope' has been autodetected for JMX exposure
+2019-05-28 11:19:56.944 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+2019-05-28 11:19:56.948 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+2019-05-28 11:19:56.959 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+2019-05-28 11:19:56.973 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=5d92e8e2,type=ConfigurationPropertiesRebinder]
+2019-05-28 11:19:56.980 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2019-05-28 11:19:56.989 [main] INFO  o.s.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2019-05-28 11:19:56.990 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-05-28 11:19:57.026 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-05-28 11:19:57.047 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-05-28 11:19:57.395 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2019-05-28 11:19:57.402 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2019-05-28 11:19:57.421 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2019-05-28 11:19:57.426 [main] INFO  com.fisher.arch.web.ThymeleafApplication - Started ThymeleafApplication in 43.413 seconds (JVM running for 51.395)
+2019-05-28 11:19:58.237 [RMI TCP Connection(8)-127.0.0.1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-05-28 11:19:58.237 [RMI TCP Connection(8)-127.0.0.1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2019-05-28 11:19:58.271 [RMI TCP Connection(8)-127.0.0.1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 34 ms
+2019-05-28 11:19:58.457 [RMI TCP Connection(6)-127.0.0.1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-05-28 11:20:17.733 [registrationTask1] WARN  d.c.b.a.client.registration.ApplicationRegistrator - Failed to register application as Application(name=thymeleaf-web-dev, managementUrl=http://10.157.135.18:8081/actuator, healthUrl=http://10.157.135.18:8081/actuator/health, serviceUrl=http://10.157.135.18:8081/) at spring-boot-admin ([http://localhost:8081/instances]): I/O error on POST request for "http://localhost:8081/instances": Read timed out; nested exception is java.net.SocketTimeoutException: Read timed out. Further attempts are logged on DEBUG level
+2019-05-28 11:20:33.222 [registrationTask1] INFO  d.c.b.a.client.registration.ApplicationRegistrator - Application registered itself as 1dd16ea8d96a
+2019-05-28 11:23:12.817 [http-nio-8081-exec-8] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method begin : rewriteUrl1, 参数: [], Kind :method-execution 
+2019-05-28 11:23:12.824 [http-nio-8081-exec-8] INFO  com.fisher.arch.web.controller.IndexController - data: {aaa=bbbb, ccc=dddd, data=success}
+2019-05-28 11:23:12.825 [http-nio-8081-exec-8] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method end : rewriteUrl1
+2019-05-28 11:23:38.804 [http-nio-8081-exec-4] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method begin : rewriteUrl1, 参数: [], Kind :method-execution 
+2019-05-28 11:23:38.804 [http-nio-8081-exec-4] INFO  com.fisher.arch.web.controller.IndexController - data: {aaa=bbbb, ccc=dddd, data=success}
+2019-05-28 11:23:38.804 [http-nio-8081-exec-4] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method end : rewriteUrl1
+2019-05-28 11:23:39.130 [http-nio-8081-exec-5] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method begin : rewriteUrl1, 参数: [], Kind :method-execution 
+2019-05-28 11:23:39.130 [http-nio-8081-exec-5] INFO  com.fisher.arch.web.controller.IndexController - data: {aaa=bbbb, ccc=dddd, data=success}
+2019-05-28 11:23:39.130 [http-nio-8081-exec-5] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method end : rewriteUrl1
+2019-05-28 11:23:39.313 [http-nio-8081-exec-6] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method begin : rewriteUrl1, 参数: [], Kind :method-execution 
+2019-05-28 11:23:39.313 [http-nio-8081-exec-6] INFO  com.fisher.arch.web.controller.IndexController - data: {aaa=bbbb, ccc=dddd, data=success}
+2019-05-28 11:23:39.313 [http-nio-8081-exec-6] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method end : rewriteUrl1
+2019-05-28 11:23:39.629 [http-nio-8081-exec-7] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method begin : rewriteUrl1, 参数: [], Kind :method-execution 
+2019-05-28 11:23:39.630 [http-nio-8081-exec-7] INFO  com.fisher.arch.web.controller.IndexController - data: {aaa=bbbb, ccc=dddd, data=success}
+2019-05-28 11:23:39.630 [http-nio-8081-exec-7] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method end : rewriteUrl1
+2019-05-28 11:23:39.874 [http-nio-8081-exec-8] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method begin : rewriteUrl1, 参数: [], Kind :method-execution 
+2019-05-28 11:23:39.874 [http-nio-8081-exec-8] INFO  com.fisher.arch.web.controller.IndexController - data: {aaa=bbbb, ccc=dddd, data=success}
+2019-05-28 11:23:39.874 [http-nio-8081-exec-8] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method end : rewriteUrl1
+2019-05-28 11:23:40.166 [http-nio-8081-exec-10] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method begin : rewriteUrl1, 参数: [], Kind :method-execution 
+2019-05-28 11:23:40.167 [http-nio-8081-exec-10] INFO  com.fisher.arch.web.controller.IndexController - data: {aaa=bbbb, ccc=dddd, data=success}
+2019-05-28 11:23:40.167 [http-nio-8081-exec-10] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method end : rewriteUrl1
+2019-05-28 11:23:40.392 [http-nio-8081-exec-1] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method begin : rewriteUrl1, 参数: [], Kind :method-execution 
+2019-05-28 11:23:40.392 [http-nio-8081-exec-1] INFO  com.fisher.arch.web.controller.IndexController - data: {aaa=bbbb, ccc=dddd, data=success}
+2019-05-28 11:23:40.392 [http-nio-8081-exec-1] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method end : rewriteUrl1
+2019-05-28 11:23:40.562 [http-nio-8081-exec-2] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method begin : rewriteUrl1, 参数: [], Kind :method-execution 
+2019-05-28 11:23:40.562 [http-nio-8081-exec-2] INFO  com.fisher.arch.web.controller.IndexController - data: {aaa=bbbb, ccc=dddd, data=success}
+2019-05-28 11:23:40.562 [http-nio-8081-exec-2] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method end : rewriteUrl1
+2019-05-28 11:23:40.892 [http-nio-8081-exec-3] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method begin : rewriteUrl1, 参数: [], Kind :method-execution 
+2019-05-28 11:23:40.892 [http-nio-8081-exec-3] INFO  com.fisher.arch.web.controller.IndexController - data: {aaa=bbbb, ccc=dddd, data=success}
+2019-05-28 11:23:40.892 [http-nio-8081-exec-3] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method end : rewriteUrl1
+2019-05-28 11:23:41.054 [http-nio-8081-exec-4] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method begin : rewriteUrl1, 参数: [], Kind :method-execution 
+2019-05-28 11:23:41.055 [http-nio-8081-exec-4] INFO  com.fisher.arch.web.controller.IndexController - data: {aaa=bbbb, ccc=dddd, data=success}
+2019-05-28 11:23:41.055 [http-nio-8081-exec-4] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method end : rewriteUrl1
+2019-05-28 11:29:01.590 [http-nio-8081-exec-3] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method begin : rewriteUrl2, 参数: [], Kind :method-execution 
+2019-05-28 11:29:01.592 [http-nio-8081-exec-3] INFO  com.fisher.arch.web.controller.IndexController - data: {aaa=bbbb, ccc=dddd, data=success}
+2019-05-28 11:29:01.601 [http-nio-8081-exec-3] INFO  com.fisher.arch.web.controller.IndexController - config: shefenfei, hahah, shefenfei, false
+2019-05-28 11:29:01.601 [http-nio-8081-exec-3] INFO  com.fisher.arch.web.controller.IndexController - config: [server1, server2]
+2019-05-28 11:29:01.602 [http-nio-8081-exec-3] INFO  com.fisher.arch.web.controller.IndexController - config: 100
+2019-05-28 11:29:01.602 [http-nio-8081-exec-3] INFO  com.fisher.arch.web.controller.IndexController - config: aaa
+2019-05-28 11:29:01.602 [http-nio-8081-exec-3] INFO  com.fisher.arch.web.controller.IndexController - config: aaa
+2019-05-28 11:29:01.602 [http-nio-8081-exec-3] INFO  com.fisher.arch.web.aop.ThymeleafAspect - method end : rewriteUrl2
+2019-05-28 13:35:30.045 [reactor-http-nio-3] INFO  d.c.boot.admin.server.services.StatusUpdater - Couldn't retrieve status for Instance(id=1dd16ea8d96a, version=2, registration=Registration(name=thymeleaf-web-dev, managementUrl=http://10.157.135.18:8081/actuator, healthUrl=http://10.157.135.18:8081/actuator/health, serviceUrl=http://10.157.135.18:8081/, source=http-api), registered=true, statusInfo=StatusInfo(status=UP, details={diskSpace={status=UP, details={total=249779191808, free=82428162048, threshold=10485760}}, redis={status=UP, details={version=4.0.1}}, db={status=UP, details={database=MySQL, hello=1}}, refreshScope={status=UP}}), statusTimestamp=2019-05-28T03:20:18.392Z, info=Info(values={}), endpoints=Endpoints(endpoints={httptrace=Endpoint(id=httptrace, url=http://10.157.135.18:8081/actuator/httptrace), loggers=Endpoint(id=loggers, url=http://10.157.135.18:8081/actuator/loggers), health=Endpoint(id=health, url=http://10.157.135.18:8081/actuator/health), refresh=Endpoint(id=refresh, url=http://10.157.135.18:8081/actuator/refresh), env=Endpoint(id=env, url=http://10.157.135.18:8081/actuator/env), heapdump=Endpoint(id=heapdump, url=http://10.157.135.18:8081/actuator/heapdump), features=Endpoint(id=features, url=http://10.157.135.18:8081/actuator/features), scheduledtasks=Endpoint(id=scheduledtasks, url=http://10.157.135.18:8081/actuator/scheduledtasks), mappings=Endpoint(id=mappings, url=http://10.157.135.18:8081/actuator/mappings), beans=Endpoint(id=beans, url=http://10.157.135.18:8081/actuator/beans), configprops=Endpoint(id=configprops, url=http://10.157.135.18:8081/actuator/configprops), threaddump=Endpoint(id=threaddump, url=http://10.157.135.18:8081/actuator/threaddump), metrics=Endpoint(id=metrics, url=http://10.157.135.18:8081/actuator/metrics), conditions=Endpoint(id=conditions, url=http://10.157.135.18:8081/actuator/conditions), auditevents=Endpoint(id=auditevents, url=http://10.157.135.18:8081/actuator/auditevents), info=Endpoint(id=info, url=http://10.157.135.18:8081/actuator/info), jolokia=Endpoint(id=jolokia, url=http://10.157.135.18:8081/actuator/jolokia)}), buildVersion=null)
+io.netty.channel.AbstractChannel$AnnotatedSocketException: Network is unreachable: /10.157.135.18:8081
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:454)
+	at sun.nio.ch.Net.connect(Net.java:446)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:648)
+	at io.netty.util.internal.SocketUtils$3.run(SocketUtils.java:83)
+	at io.netty.util.internal.SocketUtils$3.run(SocketUtils.java:80)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at io.netty.util.internal.SocketUtils.connect(SocketUtils.java:80)
+	at io.netty.channel.socket.nio.NioSocketChannel.doConnect(NioSocketChannel.java:310)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.connect(AbstractNioChannel.java:254)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.connect(DefaultChannelPipeline.java:1366)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeConnect(AbstractChannelHandlerContext.java:545)
+	at io.netty.channel.AbstractChannelHandlerContext.connect(AbstractChannelHandlerContext.java:530)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.connect(CombinedChannelDuplexHandler.java:497)
+	at io.netty.channel.ChannelOutboundHandlerAdapter.connect(ChannelOutboundHandlerAdapter.java:47)
+	at io.netty.channel.CombinedChannelDuplexHandler.connect(CombinedChannelDuplexHandler.java:298)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeConnect(AbstractChannelHandlerContext.java:545)
+	at io.netty.channel.AbstractChannelHandlerContext.connect(AbstractChannelHandlerContext.java:530)
+	at io.netty.channel.ChannelDuplexHandler.connect(ChannelDuplexHandler.java:50)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeConnect(AbstractChannelHandlerContext.java:545)
+	at io.netty.channel.AbstractChannelHandlerContext.connect(AbstractChannelHandlerContext.java:530)
+	at io.netty.channel.AbstractChannelHandlerContext.connect(AbstractChannelHandlerContext.java:512)
+	at io.netty.channel.DefaultChannelPipeline.connect(DefaultChannelPipeline.java:1024)
+	at io.netty.channel.AbstractChannel.connect(AbstractChannel.java:259)
+	at io.netty.bootstrap.Bootstrap$3.run(Bootstrap.java:252)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute$$$capture(AbstractEventExecutor.java:163)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:463)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:886)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.SocketException: Network is unreachable
+	... 31 common frames omitted
+2019-05-28 13:35:36.277 [reactor-http-nio-6] ERROR d.c.b.a.server.services.EndpointDetectionTrigger - Resubscribing after uncaught error
+java.lang.NullPointerException: null
+	at io.netty.util.NetUtil.isValidIpV4Address(NetUtil.java:648)
+	at io.netty.util.NetUtil.createByteArrayFromIpAddressString(NetUtil.java:368)
+	at reactor.ipc.netty.options.InetSocketAddressUtil.attemptParsingIpString(InetSocketAddressUtil.java:132)
+	at reactor.ipc.netty.options.InetSocketAddressUtil.createForIpString(InetSocketAddressUtil.java:80)
+	at reactor.ipc.netty.options.InetSocketAddressUtil.createInetSocketAddress(InetSocketAddressUtil.java:69)
+	at reactor.ipc.netty.options.ClientOptions.createInetSocketAddress(ClientOptions.java:253)
+	at reactor.ipc.netty.http.client.HttpClientOptions.getRemoteAddress(HttpClientOptions.java:87)
+	at reactor.ipc.netty.http.client.MonoHttpClientResponse.lambda$subscribe$0(MonoHttpClientResponse.java:74)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:44)
+	at reactor.core.publisher.MonoLift.subscribe(MonoLift.java:46)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:3080)
+	at reactor.core.publisher.FluxRetryPredicate$RetryPredicateSubscriber.resubscribe(FluxRetryPredicate.java:123)
+	at reactor.core.publisher.MonoRetryPredicate.subscribe(MonoRetryPredicate.java:51)
+	at reactor.core.publisher.MonoLift.subscribe(MonoLift.java:46)
+	at reactor.core.publisher.MonoMap.subscribe(MonoMap.java:55)
+	at reactor.core.publisher.MonoLift.subscribe(MonoLift.java:46)
+	at reactor.ipc.netty.http.client.MonoHttpClientResponse.subscribe(MonoHttpClientResponse.java:79)
+	at reactor.core.publisher.MonoMap.subscribe(MonoMap.java:55)
+	at reactor.core.publisher.MonoLift.subscribe(MonoLift.java:46)
+	at reactor.core.publisher.MonoPeek.subscribe(MonoPeek.java:71)
+	at reactor.core.publisher.MonoLift.subscribe(MonoLift.java:46)
+	at reactor.core.publisher.MonoPeek.subscribe(MonoPeek.java:71)
+	at reactor.core.publisher.MonoLift.subscribe(MonoLift.java:46)
+	at reactor.core.publisher.MonoPeek.subscribe(MonoPeek.java:71)
+	at reactor.core.publisher.MonoLift.subscribe(MonoLift.java:46)
+	at reactor.core.publisher.MonoMap.subscribe(MonoMap.java:55)
+	at reactor.core.publisher.MonoLift.subscribe(MonoLift.java:46)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:150)
+	at org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onNext(ScopePassingSpanSubscriber.java:81)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:67)
+	at org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onNext(ScopePassingSpanSubscriber.java:81)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:108)
+	at org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onNext(ScopePassingSpanSubscriber.java:81)
+	at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:1630)
+	at org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.request(ScopePassingSpanSubscriber.java:69)
+	at reactor.core.publisher.FluxMap$MapSubscriber.request(FluxMap.java:149)
+	at org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.request(ScopePassingSpanSubscriber.java:69)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:1444)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onSubscribe(Operators.java:1318)
+	at org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onSubscribe(ScopePassingSpanSubscriber.java:63)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onSubscribe(FluxMap.java:86)
+	at org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onSubscribe(ScopePassingSpanSubscriber.java:63)
+	at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+	at reactor.core.publisher.MonoLift.subscribe(MonoLift.java:46)
+	at reactor.core.publisher.MonoMap.subscribe(MonoMap.java:55)
+	at reactor.core.publisher.MonoLift.subscribe(MonoLift.java:46)
+	at reactor.core.publisher.MonoSwitchIfEmpty.subscribe(MonoSwitchIfEmpty.java:44)
+	at reactor.core.publisher.MonoLift.subscribe(MonoLift.java:46)
+	at reactor.core.publisher.MonoFlatMap.subscribe(MonoFlatMap.java:60)
+	at reactor.core.publisher.MonoLift.subscribe(MonoLift.java:46)
+	at reactor.core.publisher.MonoSwitchIfEmpty.subscribe(MonoSwitchIfEmpty.java:44)
+	at reactor.core.publisher.MonoLift.subscribe(MonoLift.java:46)
+	at reactor.core.publisher.MonoFlatMap.subscribe(MonoFlatMap.java:60)
+	at reactor.core.publisher.MonoLift.subscribe(MonoLift.java:46)
+	at reactor.core.publisher.MonoFlatMap.subscribe(MonoFlatMap.java:60)
+	at reactor.core.publisher.MonoLift.subscribe(MonoLift.java:46)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:3080)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:75)
+	at reactor.core.publisher.Operators.complete(Operators.java:125)
+	at reactor.core.publisher.MonoEmpty.subscribe(MonoEmpty.java:45)
+	at reactor.core.publisher.MonoSwitchIfEmpty.subscribe(MonoSwitchIfEmpty.java:44)
+	at reactor.core.publisher.MonoLift.subscribe(MonoLift.java:46)
+	at reactor.core.publisher.MonoSwitchIfEmpty.subscribe(MonoSwitchIfEmpty.java:44)
+	at reactor.core.publisher.MonoLift.subscribe(MonoLift.java:46)
+	at reactor.core.publisher.MonoSwitchIfEmpty.subscribe(MonoSwitchIfEmpty.java:44)
+	at reactor.core.publisher.MonoLift.subscribe(MonoLift.java:46)
+	at reactor.core.publisher.MonoMap.subscribe(MonoMap.java:55)
+	at reactor.core.publisher.MonoLift.subscribe(MonoLift.java:46)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:150)
+	at org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onNext(ScopePassingSpanSubscriber.java:81)
+	at org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onNext(ScopePassingSpanSubscriber.java:81)
+	at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:1630)
+	at org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.request(ScopePassingSpanSubscriber.java:69)
+	at org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.request(ScopePassingSpanSubscriber.java:69)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:103)
+	at org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onSubscribe(ScopePassingSpanSubscriber.java:63)
+	at org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onSubscribe(ScopePassingSpanSubscriber.java:63)
+	at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+	at reactor.core.publisher.MonoLift.subscribe(MonoLift.java:46)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.MonoLift.subscribe(MonoLift.java:46)
+	at reactor.core.publisher.MonoFlatMap.subscribe(MonoFlatMap.java:60)
+	at reactor.core.publisher.MonoLift.subscribe(MonoLift.java:46)
+	at reactor.core.publisher.MonoFlatMap.subscribe(MonoFlatMap.java:60)
+	at reactor.core.publisher.MonoLift.subscribe(MonoLift.java:46)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:3080)
+	at reactor.core.publisher.FluxRetryWhen.subscribe(FluxRetryWhen.java:82)
+	at reactor.core.publisher.MonoRetryWhen.subscribe(MonoRetryWhen.java:50)
+	at reactor.core.publisher.MonoLift.subscribe(MonoLift.java:46)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:3080)
+	at reactor.core.publisher.MonoIgnorePublisher.subscribe(MonoIgnorePublisher.java:41)
+	at reactor.core.publisher.MonoLift.subscribe(MonoLift.java:46)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:3080)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onNext(FluxFlatMap.java:372)
+	at org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onNext(ScopePassingSpanSubscriber.java:81)
+	at org.springframework.cloud.sleuth.instrument.reactor.LazySpanSubscriber.onNext(LazySpanSubscriber.java:52)
+	at reactor.core.publisher.FluxFilter$FilterSubscriber.onNext(FluxFilter.java:97)
+	at org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onNext(ScopePassingSpanSubscriber.java:81)
+	at org.springframework.cloud.sleuth.instrument.reactor.LazySpanSubscriber.onNext(LazySpanSubscriber.java:52)
+	at reactor.core.publisher.FluxSubscribeOn$SubscribeOnSubscriber.onNext(FluxSubscribeOn.java:151)
+	at org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onNext(ScopePassingSpanSubscriber.java:81)
+	at org.springframework.cloud.sleuth.instrument.reactor.LazySpanSubscriber.onNext(LazySpanSubscriber.java:52)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:108)
+	at org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onNext(ScopePassingSpanSubscriber.java:81)
+	at org.springframework.cloud.sleuth.instrument.reactor.LazySpanSubscriber.onNext(LazySpanSubscriber.java:52)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:108)
+	at org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onNext(ScopePassingSpanSubscriber.java:81)
+	at org.springframework.cloud.sleuth.instrument.reactor.LazySpanSubscriber.onNext(LazySpanSubscriber.java:52)
+	at reactor.core.publisher.FluxFilter$FilterSubscriber.onNext(FluxFilter.java:97)
+	at org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onNext(ScopePassingSpanSubscriber.java:81)
+	at org.springframework.cloud.sleuth.instrument.reactor.LazySpanSubscriber.onNext(LazySpanSubscriber.java:52)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:185)
+	at org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onNext(ScopePassingSpanSubscriber.java:81)
+	at org.springframework.cloud.sleuth.instrument.reactor.LazySpanSubscriber.onNext(LazySpanSubscriber.java:52)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:185)
+	at reactor.core.publisher.FluxPublish$PublishSubscriber.drain(FluxPublish.java:457)
+	at reactor.core.publisher.FluxPublish$PublishSubscriber.onNext(FluxPublish.java:250)
+	at reactor.core.publisher.UnicastProcessor.drainFused(UnicastProcessor.java:234)
+	at reactor.core.publisher.UnicastProcessor.drain(UnicastProcessor.java:267)
+	at reactor.core.publisher.UnicastProcessor.onNext(UnicastProcessor.java:343)
+	at reactor.core.publisher.FluxCreate$IgnoreSink.next(FluxCreate.java:568)
+	at reactor.core.publisher.FluxCreate$SerializedSink.next(FluxCreate.java:146)
+	at de.codecentric.boot.admin.server.eventstore.InstanceEventPublisher.lambda$publish$0(InstanceEventPublisher.java:44)
+	at java.util.ArrayList.forEach(ArrayList.java:1249)
+	at java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1080)
+	at de.codecentric.boot.admin.server.eventstore.InstanceEventPublisher.publish(InstanceEventPublisher.java:42)
+	at de.codecentric.boot.admin.server.eventstore.InMemoryEventStore.lambda$append$0(InMemoryEventStore.java:41)
+	at reactor.core.publisher.MonoRunnable.subscribe(MonoRunnable.java:40)
+	at reactor.core.publisher.MonoLift.subscribe(MonoLift.java:46)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.drain(MonoIgnoreThen.java:148)
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:56)
+	at reactor.core.publisher.MonoLift.subscribe(MonoLift.java:46)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:3080)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.drain(MonoIgnoreThen.java:167)
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:56)
+	at reactor.core.publisher.MonoLift.subscribe(MonoLift.java:46)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:150)
+	at org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onNext(ScopePassingSpanSubscriber.java:81)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1073)
+	at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:241)
+	at org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onNext(ScopePassingSpanSubscriber.java:81)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:108)
+	at org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onNext(ScopePassingSpanSubscriber.java:81)
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:73)
+	at org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onNext(ScopePassingSpanSubscriber.java:81)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:185)
+	at org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onNext(ScopePassingSpanSubscriber.java:81)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1073)
+	at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:241)
+	at org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onNext(ScopePassingSpanSubscriber.java:81)
+	at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:92)
+	at org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onNext(ScopePassingSpanSubscriber.java:81)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:108)
+	at org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onNext(ScopePassingSpanSubscriber.java:81)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1073)
+	at reactor.core.publisher.MonoSingle$SingleSubscriber.onComplete(MonoSingle.java:171)
+	at org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onComplete(ScopePassingSpanSubscriber.java:90)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:130)
+	at org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onComplete(ScopePassingSpanSubscriber.java:90)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.checkTerminated(FluxFlatMap.java:773)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drainLoop(FluxFlatMap.java:543)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drain(FluxFlatMap.java:523)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onComplete(FluxFlatMap.java:409)
+	at reactor.core.publisher.DrainUtils.postCompleteDrain(DrainUtils.java:131)
+	at reactor.core.publisher.DrainUtils.postComplete(DrainUtils.java:186)
+	at reactor.core.publisher.FluxMapSignal$FluxMapSignalSubscriber.onComplete(FluxMapSignal.java:213)
+	at org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onComplete(ScopePassingSpanSubscriber.java:90)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:130)
+	at org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onComplete(ScopePassingSpanSubscriber.java:90)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:130)
+	at reactor.ipc.netty.channel.FluxReceive.terminateReceiver(FluxReceive.java:377)
+	at reactor.ipc.netty.channel.FluxReceive.drainReceiver(FluxReceive.java:202)
+	at reactor.ipc.netty.channel.FluxReceive.onInboundComplete(FluxReceive.java:342)
+	at reactor.ipc.netty.channel.ChannelOperations.onInboundComplete(ChannelOperations.java:336)
+	at reactor.ipc.netty.channel.ChannelOperations.onHandlerTerminate(ChannelOperations.java:426)
+	at reactor.ipc.netty.http.client.HttpClientOperations.onInboundNext(HttpClientOperations.java:597)
+	at reactor.ipc.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:134)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:286)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:438)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:310)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:284)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:253)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1434)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:965)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:163)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:886)
+	at java.lang.Thread.run(Thread.java:745)
+2019-05-28 14:16:49.500 [Thread-104] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5d92e8e2: startup date [Tue May 28 11:19:40 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@7a360554
+2019-05-28 14:16:49.506 [Thread-104] INFO  o.s.context.support.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+2019-05-28 14:16:49.511 [Thread-104] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-05-28 14:16:49.512 [Thread-104] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2019-05-28 14:16:49.520 [Thread-104] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService
+2019-05-28 14:16:49.527 [Thread-104] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed

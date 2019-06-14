@@ -1,20 +1,22 @@
 package com.fisher.arch.dao.config;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.PropertyAccessor;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
 import org.springframework.data.redis.connection.jedis.JedisClientConfiguration;
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
-import org.springframework.data.redis.core.StringRedisTemplate;
-import org.springframework.data.redis.serializer.StringRedisSerializer;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 import redis.clients.jedis.JedisPoolConfig;
 
 /**
  * redis相关配置
  */
-@Configuration
+//@Configuration
 public class RedisConfig {
 
     @Value("${thymeleaf-web.redis.host}")
@@ -24,14 +26,25 @@ public class RedisConfig {
     private int port;
 
     @Bean
-    public StringRedisTemplate redisTemplate(RedisConnectionFactory connectionFactory) {
-        StringRedisTemplate redisTemplate = new StringRedisTemplate(connectionFactory);
-        redisTemplate.setKeySerializer(StringRedisSerializer.UTF_8);
-        redisTemplate.setHashKeySerializer(StringRedisSerializer.UTF_8);
-        redisTemplate.setDefaultSerializer(StringRedisSerializer.UTF_8);
+    public RedisTemplate redisTemplate(RedisConnectionFactory connectionFactory) {
+        RedisTemplate<String ,Object> redisTemplate = new RedisTemplate<>();
 
-        redisTemplate.setValueSerializer(StringRedisSerializer.UTF_8);
-        redisTemplate.setHashValueSerializer(StringRedisSerializer.UTF_8);
+        Jackson2JsonRedisSerializer<Object> jackson2JsonRedisSerializer
+                = new Jackson2JsonRedisSerializer<>(Object.class);
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.setVisibility(PropertyAccessor.ALL , JsonAutoDetect.Visibility.ANY);
+        objectMapper.enableDefaultTyping(ObjectMapper.DefaultTyping.NON_FINAL);
+
+        jackson2JsonRedisSerializer.setObjectMapper(objectMapper);
+
+        redisTemplate.setConnectionFactory(connectionFactory);
+        redisTemplate.setKeySerializer(jackson2JsonRedisSerializer);
+        redisTemplate.setHashKeySerializer(jackson2JsonRedisSerializer);
+
+        redisTemplate.setValueSerializer(jackson2JsonRedisSerializer);
+        redisTemplate.setHashValueSerializer(jackson2JsonRedisSerializer);
+        redisTemplate.afterPropertiesSet();
         return redisTemplate;
     }
 

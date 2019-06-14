@@ -8,4 +8,6 @@ import org.mybatis.spring.annotation.MapperScan;
 public interface UserMapper {
 
     UserPO getUserById(@Param("id") Integer id);
+
+    int save(UserPO userPO);
 }
