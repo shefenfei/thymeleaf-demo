@@ -4,9 +4,10 @@ import com.alibaba.druid.pool.DruidDataSource;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.Resource;
 
-//@Configuration
+@Configuration
 public class DruidDataSourceConfig {
 
     @Value("${thymeleaf-web.database.url}")

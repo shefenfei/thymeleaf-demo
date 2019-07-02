@@ -4,11 +4,10 @@ import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
-import org.springframework.context.annotation.Configuration;
 
-@Aspect
+//@Aspect
 @Slf4j
-@Configuration
+//@Configuration
 public class ThymeleafAspect {
 
     @Before("execution(* com.fisher.arch.web.controller.IndexController.*(..))")
@@ -60,7 +59,7 @@ public class ThymeleafAspect {
 
 
 
-//    @AfterThrowing(value = "execution(* com.fisher.arch.web.controller.*.*(..))", throwing = "ex")
+    @AfterThrowing(value = "execution(* com.fisher.arch.web.controller.*.*(..))", throwing = "ex")
     public void logAfterThrowing(Exception ex) throws Throwable{
         log.info("logAfterThrowing: {}, exception Messgae: {}", "logAfterThrowing", ex.getMessage() );
     }

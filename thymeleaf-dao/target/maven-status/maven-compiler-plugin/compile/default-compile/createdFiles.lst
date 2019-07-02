@@ -1,5 +1,0 @@
-com/fisher/arch/dao/UserMapper.class
-com/fisher/arch/dao/repository/UserRepository.class
-com/fisher/arch/dao/config/RedisConfig.class
-com/fisher/arch/dao/po/UserPO.class
-com/fisher/arch/dao/config/DruidDataSourceConfig.class

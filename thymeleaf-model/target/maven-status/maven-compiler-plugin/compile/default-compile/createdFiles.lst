@@ -1,6 +1,0 @@
-com/fisher/arch/model/vo/UserVO.class
-com/fisher/arch/model/dto/UserDto.class
-com/fisher/arch/model/vo/UserVO$UserVOBuilder.class
-com/fisher/arch/model/form/UserForm.class
-com/fisher/arch/model/exception/ApiError.class
-com/fisher/arch/model/exception/UserNotFoundException.class

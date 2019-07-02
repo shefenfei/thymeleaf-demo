@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
 import org.springframework.data.redis.connection.jedis.JedisClientConfiguration;
@@ -16,7 +17,7 @@ import redis.clients.jedis.JedisPoolConfig;
 /**
  * redis相关配置
  */
-//@Configuration
+@Configuration
 public class RedisConfig {
 
     @Value("${thymeleaf-web.redis.host}")
