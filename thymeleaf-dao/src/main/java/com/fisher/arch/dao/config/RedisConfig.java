@@ -4,15 +4,23 @@ import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cache.CacheManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.redis.cache.RedisCacheConfiguration;
+import org.springframework.data.redis.cache.RedisCacheManager;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
 import org.springframework.data.redis.connection.jedis.JedisClientConfiguration;
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
+import org.springframework.data.redis.serializer.RedisSerializationContext;
+import org.springframework.data.redis.serializer.RedisSerializer;
+import org.springframework.data.redis.serializer.StringRedisSerializer;
 import redis.clients.jedis.JedisPoolConfig;
+
+import java.time.Duration;
 
 /**
  * redis相关配置
@@ -25,6 +33,8 @@ public class RedisConfig {
 
     @Value("${thymeleaf-web.redis.port}")
     private int port;
+
+    private Duration ttl = Duration.ofSeconds(60);
 
     @Bean
     public RedisTemplate redisTemplate(RedisConnectionFactory connectionFactory) {
@@ -62,6 +72,37 @@ public class RedisConfig {
         JedisClientConfiguration jedisClientConfiguration = builder.build();
         return new JedisConnectionFactory(configuration , jedisClientConfiguration);
     }
+
+
+    @Bean
+    public CacheManager cacheManager(RedisConnectionFactory connectionFactory) {
+        RedisSerializer<String> redisSerializer = new StringRedisSerializer();
+        Jackson2JsonRedisSerializer<Object> jackson2JsonRedisSerializer = new Jackson2JsonRedisSerializer<>(Object.class);
+
+        //解决查询缓存转换异常的问题
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY);
+        objectMapper.enableDefaultTyping(ObjectMapper.DefaultTyping.NON_FINAL);
+        jackson2JsonRedisSerializer.setObjectMapper(objectMapper);
+
+        //配置序列化
+        RedisCacheConfiguration configuration = RedisCacheConfiguration.defaultCacheConfig()
+                .entryTtl(ttl)
+                .serializeKeysWith(RedisSerializationContext.SerializationPair.fromSerializer(redisSerializer))
+                .serializeValuesWith(RedisSerializationContext.SerializationPair.fromSerializer(jackson2JsonRedisSerializer))
+                .disableCachingNullValues();
+
+        RedisCacheManager cacheManager = RedisCacheManager.builder(connectionFactory).cacheDefaults(configuration).build();
+        return cacheManager;
+    }
+
+    @Bean
+    public RedisCacheConfiguration cacheConfiguration() {
+        RedisCacheConfiguration cacheConfiguration
+                = RedisCacheConfiguration.defaultCacheConfig();
+        return cacheConfiguration;
+    }
+
 
 
     @Bean

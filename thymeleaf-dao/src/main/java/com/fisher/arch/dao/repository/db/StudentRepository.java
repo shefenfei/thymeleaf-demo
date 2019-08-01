@@ -6,6 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
+import java.util.Optional;
 
 @Component
 @Slf4j
@@ -19,7 +20,7 @@ public class StudentRepository {
     }
 
 
-    public Student findStudentById(Integer id) {
+    public Optional<Student> findStudentById(Integer id) {
         return studentMapper.findStudentById(id);
     }
 

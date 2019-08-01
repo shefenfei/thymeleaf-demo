@@ -17,3 +17,9 @@ mvn deploy:deploy-file
     </server>
 
 2.Return code is: 400, ReasonPhrase: Bad Request
+
+mvn archetype:generate
+    -DgroupId=项目包名
+    -DartifactId=项目名
+    -DarchetypeArtifactId=maven-archetype-quickstart
+    -DinteractiveMode=false

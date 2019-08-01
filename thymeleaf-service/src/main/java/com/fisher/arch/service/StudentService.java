@@ -15,4 +15,8 @@ public interface StudentService {
     void updateStudent(Student student);
 
     Student findById(String id);
+
+    Student findByName(String name);
+
+    Student findByNameAndCode(String name, String code);
 }

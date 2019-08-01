@@ -94,6 +94,21 @@
             <artifactId>okhttp</artifactId>
             <version>2.5.0</version>
         </dependency>
+
+        <!--引入logback-->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jul-to-slf4j</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>log4j-over-slf4j</artifactId>
+        </dependency>
+
     </dependencies>
 
     <profiles>
@@ -110,10 +125,13 @@
 
         <!--测试环境-->
         <profile>
-            <id>test</id>
+            <id>uat</id>
             <properties>
-                <build.profile.id>test</build.profile.id>
+                <build.profile.id>uat</build.profile.id>
             </properties>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
         </profile>
 
         <!--生产-->
@@ -122,6 +140,9 @@
             <properties>
                 <build.profile.id>prod</build.profile.id>
             </properties>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
         </profile>
     </profiles>
 
@@ -136,7 +157,7 @@
                 <filtering>true</filtering>
                 <includes>
                     <include>application.yml</include>
-                    <include>/config/application-${build.profile.id}.yml</include>
+                    <include>logback-spring.xml</include>
                 </includes>
             </resource>
         </resources>

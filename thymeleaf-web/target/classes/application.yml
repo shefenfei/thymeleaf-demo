@@ -1,0 +1,116 @@
+#1, \u9879\u76EE\u57FA\u672C\u914D\u7F6E
+spring:
+  application:
+    name: thymeleaf-web-dmeo
+
+  profiles:
+    active: dev
+  boot:
+    admin:
+      client:
+        url: http://localhost:8081
+  data:
+    elasticsearch:
+      cluster-name: my-elasticsearch
+      cluster-nodes: localhost:9300
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+thymeleaf:
+  app:
+    name: shefenfei
+    author: shefenfei
+    default-subject: hahah
+    casttime: 100s
+    server-list:
+      - server1
+      - server2
+    enable: false
+    test: aaa
+
+rsik:
+  rsik-host: http://datariskv2.intra.sit.beyonds.com/bigdata/ProRiskManagement
+  rsik-model-map:
+    coupon:
+      rsikServiceName: coupon
+      rsikServiceUrl: /v2/event
+    member:
+      rsikServiceName: member
+      rsikServiceUrl: /v2/event
+    mall:
+      rsikServiceName: mall
+      rsikServiceUrl: /v2/event
+
+
+#dev 开发环境
+logging:
+  path: ./logs
+
+---
+server:
+  port: 8082
+spring:
+  profiles: dev
+  application:
+    name: thymeleaf-web-dev
+
+#2, \u6570\u636E\u5E93\u914D\u7F6E
+thymeleaf-web:
+  database:
+    username: root
+    password: 123456
+    url : jdbc:mysql://localhost:3306/thymeleaf?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&autoReconnect=true&allowMultiQueries=true
+    driver: com.mysql.jdbc.Driver
+
+  redis:
+    host: localhost
+    port: 6379
+
+
+# uat环境
+---
+server:
+  port: 8083
+spring:
+  profiles: uat
+  application:
+    name: thymeleaf-demo-uat
+
+# 自定义配置
+thymeleaf-web:
+  database:
+    username: root
+    password: 123456
+    url : jdbc:mysql://localhost:3306/thymeleaf?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&autoReconnect=true&allowMultiQueries=true
+    driver: com.mysql.jdbc.Driver
+
+  redis:
+    host: localhost
+    port: 6379
+
+
+
+# prod 环境
+---
+server:
+  port: 8084
+spring:
+  profiles: prod
+  application:
+    name: thymeleaf-demo-prod
+#2, 自定义配置
+thymeleaf-web:
+  database:
+    username: root
+    password: 123456
+    url : jdbc:mysql://localhost:3306/thymeleaf?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&autoReconnect=true&allowMultiQueries=true
+    driver: com.mysql.jdbc.Driver
+
+  redis:
+    host: localhost
+    port: 6379

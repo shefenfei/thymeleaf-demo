@@ -1,5 +1,4 @@
 #1, \u9879\u76EE\u57FA\u672C\u914D\u7F6E
-
 spring:
   application:
     name: thymeleaf-web-dmeo
@@ -14,7 +13,6 @@ spring:
     elasticsearch:
       cluster-name: my-elasticsearch
       cluster-nodes: localhost:9300
-
 management:
   endpoint:
     health:
@@ -47,3 +45,72 @@ rsik:
     mall:
       rsikServiceName: mall
       rsikServiceUrl: /v2/event
+
+
+#dev 开发环境
+logging:
+  path: ./logs
+
+---
+server:
+  port: 8082
+spring:
+  profiles: dev
+  application:
+    name: thymeleaf-web-dev
+
+#2, \u6570\u636E\u5E93\u914D\u7F6E
+thymeleaf-web:
+  database:
+    username: @datasource.username@
+    password: @datasource.password@
+    url : @datasource.url@
+    driver: @datasource.driver@
+
+  redis:
+    host: localhost
+    port: 6379
+
+
+# uat环境
+---
+server:
+  port: 8083
+spring:
+  profiles: uat
+  application:
+    name: thymeleaf-demo-uat
+
+# 自定义配置
+thymeleaf-web:
+  database:
+    username: @datasource.username@
+    password: @datasource.password@
+    url : @datasource.url@
+    driver: @datasource.driver@
+
+  redis:
+    host: localhost
+    port: 6379
+
+
+
+# prod 环境
+---
+server:
+  port: 8084
+spring:
+  profiles: prod
+  application:
+    name: thymeleaf-demo-prod
+#2, 自定义配置
+thymeleaf-web:
+  database:
+    username: @datasource.username@
+    password: @datasource.password@
+    url : @datasource.url@
+    driver: @datasource.driver@
+
+  redis:
+    host: localhost
+    port: 6379

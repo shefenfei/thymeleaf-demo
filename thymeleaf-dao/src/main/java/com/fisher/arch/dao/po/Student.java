@@ -7,13 +7,14 @@ import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 import org.springframework.data.redis.core.RedisHash;
+import org.springframework.data.redis.core.index.Indexed;
 
 import java.io.Serializable;
 import java.util.Date;
 
-//过期时间单位是 秒
-@RedisHash(value = "Student", timeToLive = 30)
-@Document(indexName = "thymleaf", type = "student", shards = 2)
+//过期时间单位是 秒, timeToLive = 30
+@RedisHash(value = "student")
+@Document(indexName = "thymleaf", type = "student")
 public class Student implements Serializable {
 
     public enum Gender {
@@ -21,8 +22,13 @@ public class Student implements Serializable {
     }
 
     @Id
+    @Indexed
     private String id;
+    //设置二级索引
+    @Indexed
     private String name;
+    @Indexed
+    private String code;
     private Gender gender;
     private int grade;
     @Field(type = FieldType.Date, format = DateFormat.custom, pattern = "yyyy-MM-dd")
@@ -67,5 +73,13 @@ public class Student implements Serializable {
 
     public void setBirthday(Date birthday) {
         this.birthday = birthday;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
     }
 }
