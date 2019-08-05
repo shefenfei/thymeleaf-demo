@@ -73,6 +73,7 @@ public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionH
     }
 
 
+
     @ExceptionHandler(value = ArithmeticException.class)
     protected ResponseEntity<Object> handleNestedServletException(Exception e) {
         return new ResponseEntity<>("{\n" +

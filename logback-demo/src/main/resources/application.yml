@@ -8,13 +8,34 @@ spring:
 ### \u5F00\u53D1\u73AF\u5883
 ---
 spring:
+  redis:
+    host: localhost
+    port: 6379
+    password:
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: 1ms
+        max-idle: 7
+        min-idle: 2
   profiles: dev
 server:
     port: 9091
 
+
 ### uat\u73AF\u5883
 ---
 spring:
+  redis:
+    host: localhost
+    port: 6379
+    password:
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: 1ms
+        max-idle: 7
+        min-idle: 2
   profiles: uat
 server:
   port: 9092
@@ -22,6 +43,16 @@ server:
 ### \u751F\u4EA7\u73AF\u5883
 ---
 spring:
+  redis:
+    host: localhost
+    port: 6379
+    password:
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: 1ms
+        max-idle: 7
+        min-idle: 2
   profiles: prod
 server:
   port: 9093

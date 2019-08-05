@@ -27,6 +27,7 @@ public interface StudentElasticRepostity extends ElasticsearchRepository<Student
     Page<Student> findByName(String name, Pageable pageable);
 
 
+
     @Query("{\n" +
             "  \"bool\": {\n" +
             "    \"must\": {\n" +
