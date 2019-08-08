@@ -1,0 +1,25 @@
+mvn deploy:deploy-file
+    -Dmaven.test.skip=true                                            //跳过编译、测试
+    -Dfile=E:\jar\alipay-sdk-java20170324180803.jar                   //jar包文件地址,绝对路径
+    -DgroupId=com.alipay                                              //gruopId,可自定义
+    -DartifactId=sdk-java                                             //artifactId,可自定义
+    -Dversion=1.0.0-SNAPSHOT                                          //版本号
+    -Dpackaging=jar                                                   //打包方式
+    -DrepositoryId=snapshots                                          //远程库服务器ID
+    -Durl=http://10.0.2.xx:8080/nexus/content/repositories/snapshots/ //远程库服务器地址
+
+1.Return code is: 401, ReasonPhrase:Unauthorized
+
+    <server>
+             <id>snapshots</id>
+             <username>admin</username>
+             <password>admin</password>
+    </server>
+
+2.Return code is: 400, ReasonPhrase: Bad Request
+
+mvn archetype:generate
+    -DgroupId=项目包名
+    -DartifactId=项目名
+    -DarchetypeArtifactId=maven-archetype-quickstart
+    -DinteractiveMode=false

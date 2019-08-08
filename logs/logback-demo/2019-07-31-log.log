@@ -1,0 +1,266 @@
+2019-07-31 15:56:46.773 [35m[restartedMain][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStarting - Starting DemoApplication on shefenfeideMacBook-Pro.local with PID 47813 (/Users/shefenfei/Documents/web_workspace/thymeleaf-demo/logback-demo/target/classes started by shefenfei in /Users/shefenfei/Documents/web_workspace/thymeleaf-demo)
+2019-07-31 15:56:46.777 [35m[restartedMain][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStartupProfileInfo - The following profiles are active: uat
+2019-07-31 15:56:46.870 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-31 15:56:46.871 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-31 15:56:47.795 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+2019-07-31 15:56:47.806 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+2019-07-31 15:56:47.815 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2019-07-31 15:56:47.815 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-31 15:56:47.880 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2019-07-31 15:56:47.880 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1009 ms
+2019-07-31 15:56:48.066 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-31 15:56:48.181 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+2019-07-31 15:56:48.203 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+2019-07-31 15:56:48.226 [35m[restartedMain][0;39m [1;31mERROR[0;39m o.apache.catalina.util.LifecycleBase.log - Failed to start component [Connector[HTTP/1.1-8080]]
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1008)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:227)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:263)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:195)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:296)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
+	at com.fisher.logback.demo.DemoApplication.main(DemoApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:230)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:213)
+	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1124)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1210)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:585)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1005)
+	... 19 common frames omitted
+2019-07-31 15:56:48.230 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.coyote.http11.Http11NioProtocol.log - Pausing ProtocolHandler ["http-nio-8080"]
+2019-07-31 15:56:48.230 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+2019-07-31 15:56:48.236 [35m[restartedMain][0;39m [34mINFO [0;39m o.apache.catalina.util.LifecycleBase.log - The stop() method was called on component [StandardServer[-1]] after stop() had already been called. The second call will be ignored.
+2019-07-31 15:56:48.237 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.coyote.http11.Http11NioProtocol.log - Stopping ProtocolHandler ["http-nio-8080"]
+2019-07-31 15:56:48.237 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.coyote.http11.Http11NioProtocol.log - Destroying ProtocolHandler ["http-nio-8080"]
+2019-07-31 15:56:48.239 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-07-31 15:56:48.243 [35m[restartedMain][0;39m [1;31mERROR[0;39m o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2019-07-31 15:56:48.245 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.s.c.ThreadPoolTaskExecutor.shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-31 15:58:21.082 [35m[restartedMain][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStarting - Starting DemoApplication on shefenfeideMacBook-Pro.local with PID 48183 (/Users/shefenfei/Documents/web_workspace/thymeleaf-demo/logback-demo/target/classes started by shefenfei in /Users/shefenfei/Documents/web_workspace/thymeleaf-demo)
+2019-07-31 15:58:21.085 [35m[restartedMain][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStartupProfileInfo - The following profiles are active: uat
+2019-07-31 15:58:21.173 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-31 15:58:21.173 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-31 15:58:22.126 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 9093 (http)
+2019-07-31 15:58:22.138 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-9093"]
+2019-07-31 15:58:22.145 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2019-07-31 15:58:22.145 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-31 15:58:22.208 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2019-07-31 15:58:22.209 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1036 ms
+2019-07-31 15:58:22.374 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-31 15:58:22.499 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+2019-07-31 15:58:22.520 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-9093"]
+2019-07-31 15:58:22.552 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 9093 (http) with context path ''
+2019-07-31 15:58:22.556 [35m[restartedMain][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStarted - Started DemoApplication in 2.033 seconds (JVM running for 2.585)
+2019-07-31 16:00:05.811 [35m[Thread-12][0;39m [34mINFO [0;39m o.s.s.c.ThreadPoolTaskExecutor.shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:00:08.731 [35m[restartedMain][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStarting - Starting DemoApplication on shefenfeideMacBook-Pro.local with PID 48603 (/Users/shefenfei/Documents/web_workspace/thymeleaf-demo/logback-demo/target/classes started by shefenfei in /Users/shefenfei/Documents/web_workspace/thymeleaf-demo)
+2019-07-31 16:00:08.735 [35m[restartedMain][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStartupProfileInfo - The following profiles are active: uat
+2019-07-31 16:00:08.824 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-31 16:00:08.825 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-31 16:00:09.760 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 9092 (http)
+2019-07-31 16:00:09.772 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-9092"]
+2019-07-31 16:00:09.779 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2019-07-31 16:00:09.779 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-31 16:00:09.842 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2019-07-31 16:00:09.843 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1018 ms
+2019-07-31 16:00:10.042 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:00:10.162 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+2019-07-31 16:00:10.182 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-9092"]
+2019-07-31 16:00:10.214 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 9092 (http) with context path ''
+2019-07-31 16:00:10.218 [35m[restartedMain][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStarted - Started DemoApplication in 2.013 seconds (JVM running for 2.567)
+2019-07-31 16:08:38.306 [35m[Thread-12][0;39m [34mINFO [0;39m o.s.s.c.ThreadPoolTaskExecutor.shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:08:42.818 [35m[restartedMain][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStarting - Starting DemoApplication on shefenfeideMacBook-Pro.local with PID 50622 (/Users/shefenfei/Documents/web_workspace/thymeleaf-demo/logback-demo/target/classes started by shefenfei in /Users/shefenfei/Documents/web_workspace/thymeleaf-demo)
+2019-07-31 16:08:42.822 [35m[restartedMain][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStartupProfileInfo - The following profiles are active: dev
+2019-07-31 16:08:42.942 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-31 16:08:42.943 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-31 16:08:43.913 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 9091 (http)
+2019-07-31 16:08:43.928 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-9091"]
+2019-07-31 16:08:43.936 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2019-07-31 16:08:43.937 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-31 16:08:44.007 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2019-07-31 16:08:44.008 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1065 ms
+2019-07-31 16:08:44.183 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:08:44.296 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+2019-07-31 16:08:44.317 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-9091"]
+2019-07-31 16:08:44.349 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 9091 (http) with context path ''
+2019-07-31 16:08:44.353 [35m[restartedMain][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStarted - Started DemoApplication in 2.119 seconds (JVM running for 2.683)
+2019-07-31 16:09:40.060 [35m[Thread-9][0;39m [34mINFO [0;39m o.s.s.c.ThreadPoolTaskExecutor.shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:09:40.201 [35m[restartedMain][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStarting - Starting DemoApplication on shefenfeideMacBook-Pro.local with PID 50622 (/Users/shefenfei/Documents/web_workspace/thymeleaf-demo/logback-demo/target/classes started by shefenfei in /Users/shefenfei/Documents/web_workspace/thymeleaf-demo)
+2019-07-31 16:09:40.201 [35m[restartedMain][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStartupProfileInfo - The following profiles are active: dev
+2019-07-31 16:09:40.427 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 9091 (http)
+2019-07-31 16:09:40.429 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-9091"]
+2019-07-31 16:09:40.430 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2019-07-31 16:09:40.430 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-31 16:09:40.439 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2019-07-31 16:09:40.439 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 236 ms
+2019-07-31 16:09:40.498 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:09:40.535 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+2019-07-31 16:09:40.550 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-9091"]
+2019-07-31 16:09:40.553 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 9091 (http) with context path ''
+2019-07-31 16:09:40.554 [35m[restartedMain][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStarted - Started DemoApplication in 0.379 seconds (JVM running for 58.886)
+2019-07-31 16:09:40.556 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.d.a.ConditionEvaluationDeltaLoggingListener.onApplicationEvent - Condition evaluation unchanged
+2019-07-31 16:09:41.946 [35m[Thread-17][0;39m [34mINFO [0;39m o.s.s.c.ThreadPoolTaskExecutor.shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:09:42.124 [35m[restartedMain][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStarting - Starting DemoApplication on shefenfeideMacBook-Pro.local with PID 50622 (/Users/shefenfei/Documents/web_workspace/thymeleaf-demo/logback-demo/target/classes started by shefenfei in /Users/shefenfei/Documents/web_workspace/thymeleaf-demo)
+2019-07-31 16:09:42.125 [35m[restartedMain][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStartupProfileInfo - The following profiles are active: dev
+2019-07-31 16:09:42.370 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 9091 (http)
+2019-07-31 16:09:42.371 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-9091"]
+2019-07-31 16:09:42.371 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2019-07-31 16:09:42.372 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-31 16:09:42.392 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2019-07-31 16:09:42.392 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 263 ms
+2019-07-31 16:09:42.466 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:09:42.548 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+2019-07-31 16:09:42.565 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-9091"]
+2019-07-31 16:09:42.568 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 9091 (http) with context path ''
+2019-07-31 16:09:42.569 [35m[restartedMain][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStarted - Started DemoApplication in 0.486 seconds (JVM running for 60.901)
+2019-07-31 16:09:42.571 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.d.a.ConditionEvaluationDeltaLoggingListener.onApplicationEvent - Condition evaluation unchanged
+2019-07-31 16:10:17.535 [35m[Thread-23][0;39m [34mINFO [0;39m o.s.s.c.ThreadPoolTaskExecutor.shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:10:17.704 [35m[restartedMain][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStarting - Starting DemoApplication on shefenfeideMacBook-Pro.local with PID 50622 (/Users/shefenfei/Documents/web_workspace/thymeleaf-demo/logback-demo/target/classes started by shefenfei in /Users/shefenfei/Documents/web_workspace/thymeleaf-demo)
+2019-07-31 16:10:17.704 [35m[restartedMain][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStartupProfileInfo - The following profiles are active: dev
+2019-07-31 16:10:17.902 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 9091 (http)
+2019-07-31 16:10:17.903 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-9091"]
+2019-07-31 16:10:17.903 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2019-07-31 16:10:17.903 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-31 16:10:17.908 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2019-07-31 16:10:17.909 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 202 ms
+2019-07-31 16:10:17.946 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:10:17.975 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+2019-07-31 16:10:17.985 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-9091"]
+2019-07-31 16:10:17.987 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 9091 (http) with context path ''
+2019-07-31 16:10:17.987 [35m[restartedMain][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStarted - Started DemoApplication in 0.316 seconds (JVM running for 96.32)
+2019-07-31 16:10:17.988 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.d.a.ConditionEvaluationDeltaLoggingListener.onApplicationEvent - Condition evaluation unchanged
+2019-07-31 16:11:43.905 [35m[Thread-29][0;39m [34mINFO [0;39m o.s.s.c.ThreadPoolTaskExecutor.shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:11:44.052 [35m[restartedMain][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStarting - Starting DemoApplication on shefenfeideMacBook-Pro.local with PID 50622 (/Users/shefenfei/Documents/web_workspace/thymeleaf-demo/logback-demo/target/classes started by shefenfei in /Users/shefenfei/Documents/web_workspace/thymeleaf-demo)
+2019-07-31 16:11:44.052 [35m[restartedMain][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStartupProfileInfo - The following profiles are active: dev
+2019-07-31 16:11:44.249 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 9091 (http)
+2019-07-31 16:11:44.250 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-9091"]
+2019-07-31 16:11:44.251 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2019-07-31 16:11:44.251 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-31 16:11:44.257 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2019-07-31 16:11:44.257 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 203 ms
+2019-07-31 16:11:44.306 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:11:44.344 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+2019-07-31 16:11:44.359 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-9091"]
+2019-07-31 16:11:44.363 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 9091 (http) with context path ''
+2019-07-31 16:11:44.363 [35m[restartedMain][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStarted - Started DemoApplication in 0.335 seconds (JVM running for 182.699)
+2019-07-31 16:11:44.365 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.d.a.ConditionEvaluationDeltaLoggingListener.onApplicationEvent - Condition evaluation unchanged
+2019-07-31 16:12:52.188 [35m[Thread-35][0;39m [34mINFO [0;39m o.s.s.c.ThreadPoolTaskExecutor.shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:12:52.312 [35m[restartedMain][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStarting - Starting DemoApplication on shefenfeideMacBook-Pro.local with PID 50622 (/Users/shefenfei/Documents/web_workspace/thymeleaf-demo/logback-demo/target/classes started by shefenfei in /Users/shefenfei/Documents/web_workspace/thymeleaf-demo)
+2019-07-31 16:12:52.312 [35m[restartedMain][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStartupProfileInfo - The following profiles are active: dev
+2019-07-31 16:12:52.541 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 9091 (http)
+2019-07-31 16:12:52.542 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-9091"]
+2019-07-31 16:12:52.543 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2019-07-31 16:12:52.543 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-31 16:12:52.550 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2019-07-31 16:12:52.550 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 235 ms
+2019-07-31 16:12:52.594 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:12:52.625 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+2019-07-31 16:12:52.636 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-9091"]
+2019-07-31 16:12:52.638 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 9091 (http) with context path ''
+2019-07-31 16:12:52.639 [35m[restartedMain][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStarted - Started DemoApplication in 0.367 seconds (JVM running for 250.976)
+2019-07-31 16:12:52.640 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.d.a.ConditionEvaluationDeltaLoggingListener.onApplicationEvent - Condition evaluation unchanged
+2019-07-31 16:14:55.713 [35m[Thread-41][0;39m [34mINFO [0;39m o.s.s.c.ThreadPoolTaskExecutor.shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:14:55.873 [35m[restartedMain][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStarting - Starting DemoApplication on shefenfeideMacBook-Pro.local with PID 50622 (/Users/shefenfei/Documents/web_workspace/thymeleaf-demo/logback-demo/target/classes started by shefenfei in /Users/shefenfei/Documents/web_workspace/thymeleaf-demo)
+2019-07-31 16:14:55.873 [35m[restartedMain][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStartupProfileInfo - The following profiles are active: dev
+2019-07-31 16:14:56.079 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 9091 (http)
+2019-07-31 16:14:56.081 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-9091"]
+2019-07-31 16:14:56.081 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2019-07-31 16:14:56.081 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-31 16:14:56.088 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2019-07-31 16:14:56.088 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 212 ms
+2019-07-31 16:14:56.134 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:14:56.169 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+2019-07-31 16:14:56.179 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-9091"]
+2019-07-31 16:14:56.181 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 9091 (http) with context path ''
+2019-07-31 16:14:56.182 [35m[restartedMain][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStarted - Started DemoApplication in 0.346 seconds (JVM running for 374.523)
+2019-07-31 16:14:56.183 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.d.a.ConditionEvaluationDeltaLoggingListener.onApplicationEvent - Condition evaluation unchanged
+2019-07-31 16:16:11.023 [35m[Thread-47][0;39m [34mINFO [0;39m o.s.s.c.ThreadPoolTaskExecutor.shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:16:11.155 [35m[restartedMain][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStarting - Starting DemoApplication on shefenfeideMacBook-Pro.local with PID 50622 (/Users/shefenfei/Documents/web_workspace/thymeleaf-demo/logback-demo/target/classes started by shefenfei in /Users/shefenfei/Documents/web_workspace/thymeleaf-demo)
+2019-07-31 16:16:11.156 [35m[restartedMain][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStartupProfileInfo - The following profiles are active: dev
+2019-07-31 16:16:11.361 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 9091 (http)
+2019-07-31 16:16:11.362 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-9091"]
+2019-07-31 16:16:11.362 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2019-07-31 16:16:11.363 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-31 16:16:11.370 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2019-07-31 16:16:11.371 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 212 ms
+2019-07-31 16:16:11.419 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:16:11.450 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+2019-07-31 16:16:11.461 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-9091"]
+2019-07-31 16:16:11.464 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 9091 (http) with context path ''
+2019-07-31 16:16:11.466 [35m[restartedMain][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStarted - Started DemoApplication in 0.342 seconds (JVM running for 449.809)
+2019-07-31 16:16:11.467 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.d.a.ConditionEvaluationDeltaLoggingListener.onApplicationEvent - Condition evaluation unchanged
+2019-07-31 16:16:38.564 [35m[Thread-58][0;39m [34mINFO [0;39m o.s.s.c.ThreadPoolTaskExecutor.shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:16:43.682 [35m[main][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStarting - Starting DemoApplication v0.0.1-SNAPSHOT on shefenfeideMacBook-Pro.local with PID 52624 (/Users/shefenfei/Documents/web_workspace/thymeleaf-demo/logback-demo/target/demo-0.0.1-SNAPSHOT.jar started by shefenfei in /Users/shefenfei/Documents/web_workspace/thymeleaf-demo)
+2019-07-31 16:16:43.686 [35m[main][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStartupProfileInfo - The following profiles are active: dev
+2019-07-31 16:16:44.688 [35m[main][0;39m [34mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 9091 (http)
+2019-07-31 16:16:44.705 [35m[main][0;39m [34mINFO [0;39m o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-9091"]
+2019-07-31 16:16:44.723 [35m[main][0;39m [34mINFO [0;39m o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2019-07-31 16:16:44.723 [35m[main][0;39m [34mINFO [0;39m o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-31 16:16:44.802 [35m[main][0;39m [34mINFO [0;39m o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2019-07-31 16:16:44.802 [35m[main][0;39m [34mINFO [0;39m o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1031 ms
+2019-07-31 16:16:45.025 [35m[main][0;39m [34mINFO [0;39m o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:16:45.281 [35m[main][0;39m [34mINFO [0;39m o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-9091"]
+2019-07-31 16:16:45.315 [35m[main][0;39m [34mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 9091 (http) with context path ''
+2019-07-31 16:16:45.317 [35m[main][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStarted - Started DemoApplication in 2.198 seconds (JVM running for 2.6)
+2019-07-31 16:16:53.528 [35m[Thread-3][0;39m [34mINFO [0;39m o.s.s.c.ThreadPoolTaskExecutor.shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:22:58.311 [35m[main][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStarting - Starting DemoApplication v0.0.1-SNAPSHOT on shefenfeideMacBook-Pro.local with PID 54094 (/Users/shefenfei/Documents/web_workspace/thymeleaf-demo/logback-demo/target/demo-0.0.1-SNAPSHOT.jar started by shefenfei in /Users/shefenfei/Documents/web_workspace/thymeleaf-demo)
+2019-07-31 16:22:58.316 [35m[main][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStartupProfileInfo - The following profiles are active: prod
+2019-07-31 16:22:59.313 [35m[main][0;39m [34mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 9093 (http)
+2019-07-31 16:22:59.327 [35m[main][0;39m [34mINFO [0;39m o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-9093"]
+2019-07-31 16:22:59.337 [35m[main][0;39m [34mINFO [0;39m o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2019-07-31 16:22:59.337 [35m[main][0;39m [34mINFO [0;39m o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-31 16:22:59.418 [35m[main][0;39m [34mINFO [0;39m o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2019-07-31 16:22:59.418 [35m[main][0;39m [34mINFO [0;39m o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1029 ms
+2019-07-31 16:22:59.617 [35m[main][0;39m [34mINFO [0;39m o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:22:59.861 [35m[main][0;39m [34mINFO [0;39m o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-9093"]
+2019-07-31 16:22:59.896 [35m[main][0;39m [34mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 9093 (http) with context path ''
+2019-07-31 16:22:59.899 [35m[main][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStarted - Started DemoApplication in 2.126 seconds (JVM running for 2.519)
+2019-07-31 16:23:06.796 [35m[Thread-3][0;39m [34mINFO [0;39m o.s.s.c.ThreadPoolTaskExecutor.shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:23:50.535 [35m[restartedMain][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStarting - Starting DemoApplication on shefenfeideMacBook-Pro.local with PID 54309 (/Users/shefenfei/Documents/web_workspace/thymeleaf-demo/logback-demo/target/classes started by shefenfei in /Users/shefenfei/Documents/web_workspace/thymeleaf-demo)
+2019-07-31 16:23:50.539 [35m[restartedMain][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStartupProfileInfo - The following profiles are active: dev
+2019-07-31 16:23:50.640 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-31 16:23:50.640 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-31 16:23:51.571 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 9091 (http)
+2019-07-31 16:23:51.586 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-9091"]
+2019-07-31 16:23:51.595 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2019-07-31 16:23:51.595 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-31 16:23:51.661 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2019-07-31 16:23:51.661 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1020 ms
+2019-07-31 16:23:51.846 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-31 16:23:51.980 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+2019-07-31 16:23:52.003 [35m[restartedMain][0;39m [34mINFO [0;39m o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-9091"]
+2019-07-31 16:23:52.036 [35m[restartedMain][0;39m [34mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 9091 (http) with context path ''
+2019-07-31 16:23:52.040 [35m[restartedMain][0;39m [34mINFO [0;39m c.f.logback.demo.DemoApplication.logStarted - Started DemoApplication in 2.115 seconds (JVM running for 2.81)
+2019-07-31 16:25:42.675 [35m[Thread-12][0;39m [34mINFO [0;39m o.s.s.c.ThreadPoolTaskExecutor.shutdown - Shutting down ExecutorService 'applicationTaskExecutor'

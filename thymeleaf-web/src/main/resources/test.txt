@@ -1,0 +1,146 @@
+$ gpg --gen-key
+gpg (GnuPG) 1.4.21; Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Please select what kind of key you want:
+   (1) RSA and RSA (default)
+   (2) DSA and Elgamal
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+Your selection?
+RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (2048)
+Requested keysize is 2048 bits
+Please specify how long the key should be valid.
+         0 = key does not expire
+      <n>  = key expires in n days
+      <n>w = key expires in n weeks
+      <n>m = key expires in n months
+      <n>y = key expires in n years
+Key is valid for? (0)
+Key does not expire at all
+Is this correct? (y/N) y
+
+You need a user ID to identify your key; the software constructs the user ID
+from the Real Name, Comment and Email Address in this form:
+    "Heinrich Heine (Der Dichter) <heinrichh@duesseldorf.de>"
+
+Real name: sunchenbin
+Email address: sunchenbinkey@163.com
+Comment:
+You selected this USER-ID:
+    "sunchenbin <sunchenbinkey@163.com>"
+
+Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit?
+Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? o
+You need a Passphrase to protect your secret key.
+
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+......+++++
+.....+++++
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+........+++++
++++++
+gpg: key 09D71290 marked as ultimately trusted
+public and secret key created and signed.
+
+gpg: checking the trustdb
+gpg: 3 marginal(s) needed, 1 complete(s) needed, PGP trust model
+gpg: depth: 0  valid:   2  signed:   0  trust: 0-, 0q, 0n, 0m, 0f, 2u
+pub   2048R/09D71290 2017-11-13
+      Key fingerprint = 6A67 3904 E8BB F8D6 780B  CC5D 65E4 DAD5 09D7 1290
+uid                  sunchenbin <sunchenbinkey@163.com>
+sub   2048R/23D05BFD 2017-11-13
+
+
+这样密钥就产生了，You need a Passphrase to protect your secret key.
+注意这里输入的密码，后续上传到maven中央仓库是需要用到的。
+
+3.2 上传密钥
+
+首先查看自己key的编号：
+gpg --list-keys
+
+找到 pub对应的那个编号，例如pub 2048R/8C473F5C
+上传到key验证库：
+gpg --keyserver hkp://keyserver.ubuntu.com:11371 --send-keys 8C473F5C
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+
+    <name>com.gitee.sunchenbin.mybatis.actable:mybatis-enhance-actable</name>
+    <description>A.CTable is a Maven project based on Spring and Mybatis, which enhances the function of Mybatis</description>
+    <url>https://gitee.com/sunchenbin/mybatis-enhance</url>
+
+    <licenses>
+       <license>
+          <name>The Apache Software License, Version 2.0</name>
+          <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+          <distribution>actable</distribution>
+       </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>sunchenbin</name>
+            <email>458757617@qq.com</email>
+            <organization>sunchenbin</organization>
+            <url>https://gitee.com/sunchenbin/mybatis-enhance</url>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git@gitee.com:sunchenbin/mybatis-enhance.git</connection>
+        <developerConnection>scm:git:git@gitee.com:sunchenbin/mybatis-enhance.git</developerConnection>
+        <url>https://gitee.com/sunchenbin/mybatis-enhance</url>
+        <tag>1.0</tag>
+    </scm>
+    <distributionManagement>
+        <snapshotRepository>
+          <!-- 这个id需要在setting.xml中设置  -->
+          <id>oss</id>
+          <name>OSS Snapshots Repository</name>
+          <!-- 这里的url就是Issue中回复的snapshots 的repo地址-->
+          <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+          <id>oss</id>
+          <name>OSS Staging Repository</name>
+          <!-- 这里的url就是Issue中回复的staging 的repo地址-->
+          <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+      </distributionManagement>
+
+      <servers>
+        <server>
+          <id>sonatype-nexus-snapshots</id>
+          <username>上面第一步时注册的帐号</username>
+          <password>上面第一步时注册的密码</password>
+        </server>
+        <server>
+          <id>sonatype-nexus-staging</id>
+          <username>上面第一步时注册的帐号</username>
+          <password>上面第一步时注册的密码</password>
+        </server>
+      </servers>
+
+      5.部署上传jar包
+        命令行进入到项目pom.xml所在的目录下，运行如下命令
+        mvn clean deploy -P sonatype-oss-release -Darguments="gpg.passphrase=
+        设置gpg设置密钥时候输入的Passphrase"
+        过程中可能需要你手动输入密码。
+
+      6.release jar包
+        如果前几个步骤全部正确完成，登录https://oss.sonatype.org/#stagingRepositories
+        （用户名密码就是第一步注册时的用户名密码），将Staging Rpositories拉到最下即可看到你刚刚发布的jar包，
+        选择上方的Close，稍等片刻他先检查一下你上传的东西是否符合规范，检查完毕后该条状态被标记为closed，
+        此时选中后点上面的Release即可，等2个小时左右即可在http://search.maven.org/看到你发布的jar包。
