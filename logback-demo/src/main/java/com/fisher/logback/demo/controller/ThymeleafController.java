@@ -1,4 +1,4 @@
-package com.fisher.logback.demo;
+package com.fisher.logback.demo.controller;
 
 
 import org.springframework.stereotype.Controller;

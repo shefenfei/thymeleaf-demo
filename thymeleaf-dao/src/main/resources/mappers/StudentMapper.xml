@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.fisher.arch.dao.StudentMapper">
+
+    <cache/>
 
     <insert id="saveStudent" parameterType="com.fisher.arch.dao.po.Student" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
         INSERT INTO student(name, gender, grade,birthday) VALUES (#{name},#{gender}, #{grade}, #{birthday});
@@ -14,7 +17,7 @@
 
     </delete>
 
-    <select id="findStudentById" resultType="com.fisher.arch.dao.po.Student">
+    <select id="findStudentById" resultType="com.fisher.arch.dao.po.Student" useCache="true" flushCache="true">
         SELECT id, name, gender, grade, birthday FROM student WHERE id = #{id};
     </select>
 </mapper>

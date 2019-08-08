@@ -1,4 +1,4 @@
-package com.fisher.logback.demo;
+package com.fisher.logback.demo.controller;
 
 import com.fisher.logback.demo.model.Goods;
 import com.fisher.logback.demo.model.Person;
@@ -122,9 +122,6 @@ public class RedissonController {
         } finally {
             goodsLock.unlock();
         }
-
-
-
         return new ResponseEntity<>("", HttpStatus.OK);
     }
 

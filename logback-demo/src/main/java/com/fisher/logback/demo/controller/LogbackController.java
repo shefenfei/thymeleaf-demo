@@ -1,4 +1,4 @@
-package com.fisher.logback.demo;
+package com.fisher.logback.demo.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
