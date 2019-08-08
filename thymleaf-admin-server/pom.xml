@@ -56,6 +56,44 @@
         </dependencies>
     </dependencyManagement>
 
+    <profiles>
+        <!-- dev -->
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <current.profile>dev</current.profile>
+            </properties>
+        </profile>
+
+        <!-- sit -->
+        <profile>
+            <id>sit</id>
+            <properties>
+                <current.profile>sit</current.profile>
+            </properties>
+        </profile>
+
+        <!-- uat -->
+        <profile>
+            <id>uat</id>
+            <properties>
+                <current.profile>uat</current.profile>
+            </properties>
+        </profile>
+
+        <!-- prod -->
+        <profile>
+            <id>prod</id>
+            <properties>
+                <current.profile>prod</current.profile>
+            </properties>
+        </profile>
+    </profiles>
+
+
     <build>
         <plugins>
             <plugin>

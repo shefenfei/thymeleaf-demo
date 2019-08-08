@@ -5,6 +5,8 @@ import com.fisher.arch.dao.repository.redis.PersonRedisSetRepository;
 import com.fisher.arch.dao.repository.redis.PersonRedisTemplateListRepository;
 import com.fisher.arch.service.PersonService;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,6 +20,8 @@ import java.util.Set;
 @Slf4j
 public class PersonController {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(PersonController.class);
+
     @Resource
     private PersonService personService;
     @Resource
@@ -27,6 +31,7 @@ public class PersonController {
 
     @PostMapping("/save")
     public ResponseEntity savePerson(@RequestBody Person person) {
+        LOGGER.info("数据 ：{}",  person);
         personService.savePerson(person);
         return new ResponseEntity<>("", HttpStatus.OK);
     }
@@ -45,7 +50,7 @@ public class PersonController {
 
     @PostMapping("/deleteByIds")
     public ResponseEntity deleteByIds(@RequestBody Integer[] ids) {
-        log.info("ids : {}", ids);
+        LOGGER.info("ids : {}", ids);
         personService.deleteByIds(ids);
         return new ResponseEntity<>("", HttpStatus.OK);
     }
@@ -55,10 +60,10 @@ public class PersonController {
     public ResponseEntity saveByList(@RequestBody Person person) {
         listRepository.addPerson(person);
         long numberOfPerson = listRepository.getNumberOfPerson();
-        log.info("number of person : {}", numberOfPerson);
+        LOGGER.info("number of person : {}", numberOfPerson);
 
         Person friendAtIndex = listRepository.getFriendAtIndex(1);
-        log.info("friendArIndex : {}", friendAtIndex);
+        LOGGER.info("friendArIndex : {}", friendAtIndex);
 
         listRepository.removePerson(1, person);
 
@@ -77,7 +82,7 @@ public class PersonController {
     @PostMapping("/saveBySet")
     public ResponseEntity saveBySet(@RequestBody Person[] people) {
         redisSetRepository.addFamilyMembers(people);
-        log.info("request body : {}", people);
+        LOGGER.info("request body : {}", people);
         return new ResponseEntity<>("", HttpStatus.OK);
     }
 

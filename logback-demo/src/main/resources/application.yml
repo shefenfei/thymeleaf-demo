@@ -4,8 +4,15 @@ logging:
 spring:
   profiles:
     active: @build.profile.id@
+  thymeleaf:
+    prefix: classpath:/templates/
+    enabled: true
+    mode: HTML
+    suffix: .html
+    encoding: UTF-8
+    cache: false
 
-### \u5F00\u53D1\u73AF\u5883
+### dev
 ---
 spring:
   redis:
@@ -21,9 +28,20 @@ spring:
   profiles: dev
 server:
     port: 9091
+multidatasource:
+  - db1:
+      username: root
+      password: 123456
+      url:
+  - db2:
+      username: root
+      password: 123456
+      url:
+        -
+  - db3:
 
 
-### uat\u73AF\u5883
+### uat
 ---
 spring:
   redis:
@@ -40,7 +58,7 @@ spring:
 server:
   port: 9092
 
-### \u751F\u4EA7\u73AF\u5883
+### prod
 ---
 spring:
   redis:

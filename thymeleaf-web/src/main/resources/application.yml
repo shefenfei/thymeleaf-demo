@@ -13,6 +13,17 @@ spring:
     elasticsearch:
       cluster-name: my-elasticsearch
       cluster-nodes: localhost:9300
+
+  thymeleaf:
+    prefix: classpath:/templates/
+    enabled: true
+    mode: HTML
+    suffix: .html
+    encoding: UTF-8
+    cache: false
+    check-template: true
+    check-template-location: true
+
 management:
   endpoint:
     health:

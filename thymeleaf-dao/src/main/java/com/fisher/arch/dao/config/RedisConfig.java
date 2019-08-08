@@ -20,6 +20,7 @@ import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 import redis.clients.jedis.JedisPoolConfig;
 
+import java.nio.charset.StandardCharsets;
 import java.time.Duration;
 
 /**
@@ -49,9 +50,12 @@ public class RedisConfig {
 
         jackson2JsonRedisSerializer.setObjectMapper(objectMapper);
 
+        //将redis的序列化key使用 string 就是跟java的一样
+        StringRedisSerializer stringRedisSerializer = new StringRedisSerializer(StandardCharsets.UTF_8);
+
         redisTemplate.setConnectionFactory(connectionFactory);
-        redisTemplate.setKeySerializer(jackson2JsonRedisSerializer);
-        redisTemplate.setHashKeySerializer(jackson2JsonRedisSerializer);
+        redisTemplate.setKeySerializer(stringRedisSerializer);
+        redisTemplate.setHashKeySerializer(stringRedisSerializer);
 
         redisTemplate.setValueSerializer(jackson2JsonRedisSerializer);
         redisTemplate.setHashValueSerializer(jackson2JsonRedisSerializer);

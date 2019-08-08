@@ -1,6 +1,8 @@
 package com.fisher.logback.demo;
 
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,6 +13,8 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping("/logback")
 @Slf4j
 public class LogbackController {
+
+    private static final Logger log = LoggerFactory.getLogger(LogbackController.class);
 
     @GetMapping("/print")
     public ResponseEntity printLog() {
