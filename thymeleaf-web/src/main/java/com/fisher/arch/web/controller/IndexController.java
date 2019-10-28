@@ -185,6 +185,15 @@ public class IndexController {
         return new ResponseEntity<>(b, HttpStatus.OK);
     }
 
+    @GetMapping("/fromOther")
+    public ResponseEntity fromOther() {
+        return new ResponseEntity<>("{\n" +
+                "  \"data\" : \"hahahah from thymeleaf\",\n" +
+                "  \"message\" : \"success\",\n" +
+                "  \"code\" : 200\n" +
+                "}", HttpStatus.OK);
+    }
+
 
     public static void main(String[] args) {
 

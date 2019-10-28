@@ -7,20 +7,32 @@ import com.fisher.arch.model.exception.UserNotFoundException;
 import com.fisher.arch.model.form.UserForm;
 import com.fisher.arch.model.vo.UserVO;
 import com.fisher.arch.service.IndexService;
+import io.sentry.SentryClient;
+import io.sentry.context.Context;
+import io.sentry.event.BreadcrumbBuilder;
+import io.sentry.event.UserBuilder;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+import javax.annotation.Resource;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
 public class IndexServiceImpl implements IndexService {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(IndexServiceImpl.class);
+
     @Autowired
     private UserRepository userRepository;
+
+    @Resource
+    private SentryClient sentryClient;
 
     @Override
     public String testIndex() {
@@ -62,14 +74,27 @@ public class IndexServiceImpl implements IndexService {
 
     @Override
     public List<UserVO> findAllUser() {
-        List collect = userRepository.findAllUser().stream().map((userDto) -> {
+        return userRepository.findAllUser().stream().map((userDto) -> {
             UserVO userVO = new UserVO();
             userVO.setUsername(userDto.getUser_name());
             return userVO;
         }).collect(Collectors.toList());
-        return collect;
     }
 
+    @Override
+    public void reportException() {
+        Context context = sentryClient.getContext();
+        context.recordBreadcrumb(new BreadcrumbBuilder().setMessage("report exception error").build());
+        context.setUser(new UserBuilder().setEmail("she1990111@sina.com").build());
+        try {
+            int result = 1 / 0;
+            LOGGER.info("结果: {}", result);
+        } catch (Exception e) {
+            LOGGER.error("出错了: {}", e.getMessage());
+            sentryClient.sendException(e);
+            sentryClient.sendMessage("出错了");
+        }
+    }
 
 
 }

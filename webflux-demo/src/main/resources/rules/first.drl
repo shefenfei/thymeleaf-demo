@@ -1,0 +1,14 @@
+package com.fisher.arch.webflux.demo
+import com.fisher.arch.webflux.demo.model.Item
+
+dialect  "java"
+rule "Hello World"
+    dialect "mvel"
+    when
+        m : Item(id > 0)
+    then
+        System.out.println(m.getName());
+    modify ( m ) {
+        name = "Goodbye cruel world", price = 150
+    };
+end

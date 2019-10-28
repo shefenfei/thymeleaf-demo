@@ -17,4 +17,6 @@ public interface IndexService {
     boolean saveUser(UserForm userForm);
 
     List findAllUser();
+
+    void reportException();
 }

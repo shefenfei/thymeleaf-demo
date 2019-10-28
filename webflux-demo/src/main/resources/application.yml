@@ -1,0 +1,12 @@
+server:
+  port: 10000
+
+
+custom:
+  db:
+    username: root
+    password: 123456
+    driver: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/auth_demo?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&autoReconnect=true&allowMultiQueries=true
+
+
