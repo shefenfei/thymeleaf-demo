@@ -38,4 +38,5 @@ public class SceneRule {
     public void setActivityTime(String activityTime) {
         this.activityTime = activityTime;
     }
+
 }

@@ -1,9 +1,16 @@
 package com.fisher.arch.webflux.demo.controller;
 
+import com.fisher.arch.webflux.demo.model.Apple;
+import com.fisher.arch.webflux.demo.model.Fruit;
 import com.fisher.arch.webflux.demo.model.Item;
 import com.fisher.arch.webflux.demo.model.SceneRule;
+import com.fisher.arch.webflux.demo.service.AppleSellProxy;
 import com.fisher.arch.webflux.demo.service.DemoService;
 import com.fisher.arch.webflux.demo.service.DroolsService;
+import com.fisher.arch.webflux.demo.service.FruitFactory;
+import com.fisher.arch.webflux.demo.service.impl.AppleFactory;
+import com.fisher.arch.webflux.demo.service.impl.AppleSellServiceImpl;
+import com.fisher.arch.webflux.demo.service.impl.BananaFactory;
 import org.kie.api.io.ResourceType;
 import org.kie.internal.KnowledgeBase;
 import org.kie.internal.KnowledgeBaseFactory;
@@ -82,7 +89,7 @@ public class TestController {
 
 
     @GetMapping("/execute")
-    public Mono<String> executeRule() {
+    public Mono<String> executeRule(){
         SceneRule sceneRule = new SceneRule();
         sceneRule.setSceneId(1);
         sceneRule.setPlazaId(0);
@@ -97,7 +104,35 @@ public class TestController {
     @PostMapping("dynamic")
     public Mono<String> testDynamicRule(@RequestBody SceneRule sceneRule) {
         droolsService.checkRule(sceneRule);
+
         return Mono.just("hi");
     }
+
+
+    @PostMapping("testProxy")
+    public Mono<String> testProxy() {
+        AppleSellProxy appleSellProxy = new AppleSellProxy(new AppleSellServiceImpl());
+        Apple apple = new Apple();
+        apple.setName("好的apple");
+        apple.setAddress("甘肃");
+        apple.setPrice(6D);
+        appleSellProxy.sellApple(apple);
+        return Mono.just("hi");
+    }
+
+
+    @GetMapping("testFactory")
+    public Mono<String> testFactory() {
+        FruitFactory fruitFactory = new AppleFactory();
+        Fruit fruit = fruitFactory.buildFruit();
+        System.out.println(fruit.toString());
+
+
+        FruitFactory bananaFactory = new BananaFactory();
+        Fruit fruit1 = bananaFactory.buildFruit();
+        System.out.println(fruit1);
+        return Mono.just("apple");
+    }
+
 
 }
