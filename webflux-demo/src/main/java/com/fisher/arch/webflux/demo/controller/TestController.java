@@ -135,4 +135,10 @@ public class TestController {
     }
 
 
+    @GetMapping("/batchInsert")
+    public Mono<String> testBatchInsertRedis() {
+        demoService.batchInsert();
+        return Mono.just("ok");
+    }
+
 }

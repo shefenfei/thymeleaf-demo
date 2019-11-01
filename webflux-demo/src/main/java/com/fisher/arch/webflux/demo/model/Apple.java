@@ -5,6 +5,7 @@ import lombok.Data;
 @Data
 public class Apple extends Fruit{
 
+    private Integer no;
     private String address;
 
 }
