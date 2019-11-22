@@ -1,5 +1,6 @@
 logging:
   path: ./logs
+  config: classpath:logback-spring.xml
 
 spring:
   profiles:

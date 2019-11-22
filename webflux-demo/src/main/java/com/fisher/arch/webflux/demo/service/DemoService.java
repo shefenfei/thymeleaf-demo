@@ -13,4 +13,7 @@ public interface DemoService {
     Future<String> asyncMethodWithReturnType();
 
     void batchInsert();
+
+
+    void saveHash();
 }

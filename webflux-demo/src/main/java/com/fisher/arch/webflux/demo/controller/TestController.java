@@ -20,14 +20,25 @@ import org.kie.internal.builder.KnowledgeBuilderErrors;
 import org.kie.internal.builder.KnowledgeBuilderFactory;
 import org.kie.internal.io.ResourceFactory;
 import org.kie.internal.runtime.StatefulKnowledgeSession;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
 
+import java.math.BigDecimal;
+import java.util.*;
 import java.util.concurrent.Future;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.function.*;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 @RequestMapping("/rest")
 @RestController
 public class TestController {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(TestController.class);
 
     private DemoService demoService;
     private DroolsService droolsService;
@@ -87,9 +98,8 @@ public class TestController {
     }
 
 
-
     @GetMapping("/execute")
-    public Mono<String> executeRule(){
+    public Mono<String> executeRule() {
         SceneRule sceneRule = new SceneRule();
         sceneRule.setSceneId(1);
         sceneRule.setPlazaId(0);
@@ -97,8 +107,6 @@ public class TestController {
         droolsService.executeRules(sceneRule);
         return Mono.just("hahh");
     }
-
-
 
 
     @PostMapping("dynamic")
@@ -139,6 +147,118 @@ public class TestController {
     public Mono<String> testBatchInsertRedis() {
         demoService.batchInsert();
         return Mono.just("ok");
+    }
+
+    @PostMapping("/testSaveHash")
+    public Mono<String> testSaveHash() {
+        LOGGER.info("开始存储hash");
+        demoService.saveHash();
+        return Mono.just("jo");
+    }
+
+
+    @PostMapping("/testDebug")
+    public Mono<String> testDebug() {
+        LOGGER.info("开始测试debug");
+        List<Apple> objects = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            Apple apple = new Apple();
+            apple.setNo(i);
+            apple.setName("apple:" + i);
+
+            objects.add(apple);
+        }
+
+        for (Apple apple : objects) {
+            apple.setPrice(100D);
+        }
+
+        Apple apple = new Apple();
+        apple.setNo(100);
+
+        //设定一个条件
+        Predicate<Integer> predicate = x -> x > 100;
+        if (predicate.test(apple.getNo())) {
+            LOGGER.info("值确实是大于100 ");
+        }
+
+        //消费消息
+        Consumer<String> consumer = str -> LOGGER.info(str);
+        consumer.accept("这是要打印的东西");
+
+
+        //转换消息
+        Function<Apple, String> appleFunction = apple1 -> {
+            return apple1.getAddress();
+        };
+        appleFunction.apply(apple);
+
+        //生产消息
+        Supplier<String> stringSupplier = () -> {
+            return BigDecimal.TEN.toString();
+        };
+
+        String s = stringSupplier.get();
+
+        //一元操作
+        UnaryOperator<String> unaryOperator = s1 -> {
+            return "" + 1;
+        };
+        String apply = unaryOperator.apply("2");
+
+
+        //二元操作
+        BinaryOperator<String> binaryOperator = (s1, s2) -> {
+            return s1 + s2;
+        };
+        binaryOperator.apply("", "");
+
+        BinaryOperator<Integer> integerBinaryOperator = (arg1, arg2) -> {
+            return arg1 + arg2;
+        };
+        integerBinaryOperator.apply(1, 2);
+
+        List<Apple> collect = Stream.of(new Apple(), new Apple(), new Apple()).collect(Collectors.toList());
+        Map<Integer, Apple> appleMap = Stream.of(new Apple(), new Apple(), new Apple())
+                .collect(Collectors.toMap((keyObj) -> {
+                    return keyObj.getNo();
+                }, (valObj) -> {
+                    return valObj;
+                }));
+
+        Stream.of(new Apple(), new Apple(), new Apple()).filter(a -> a.getNo() == 1).collect(Collectors.toList());
+        Optional<Apple> appleOptional = Stream.of(new Apple(), new Apple(), new Apple()).max(Comparator.comparing(appleObj -> appleObj.getNo()));
+        Stream.of(new Apple(), new Apple(), new Apple()).filter(obj -> obj.getNo() == 1).count();
+        Integer reduce = Stream.of(1, 2, 3, 4, 5, 6, 8).reduce(0, (acx, x) -> acx + x);
+
+        Stream.of(new Apple(), new Apple(), new Apple()).max(Comparator.comparing(a -> a.getNo()));
+        Stream.of(new Apple(), new Apple(), new Apple()).min(Comparator.comparing(a -> a.getNo()));
+
+        //以条件分组
+        Map<Boolean, List<Apple>> listMap
+                = Stream.of(new Apple(), new Apple(), new Apple()).collect(Collectors.partitioningBy(apple1 -> apple1.getPrice() > 100));
+
+        String collect1 = Stream.of(new Apple(), new Apple(), new Apple())
+                .map(app1 -> app1.getName())
+                .collect(Collectors.joining(",", "{", "}"));
+
+        return Mono.just("jo");
+    }
+
+
+    public static void main(String[] args) throws InterruptedException {
+//        此队列按FIFO（先进先出）排序元素
+        LinkedBlockingQueue<Integer> blockingQueue = new LinkedBlockingQueue<>(100);
+        IntStream.range(0, 100).forEach(blockingQueue::offer);
+
+        int size = blockingQueue.size();
+        System.out.println(size);
+
+        //isEmpty()的性能要好过 size()的性能
+        while (blockingQueue.isEmpty()) {
+            int i = blockingQueue.take();
+            System.out.println(i);
+        }
     }
 
 }

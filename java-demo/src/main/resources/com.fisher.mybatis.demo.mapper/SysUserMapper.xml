@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fisher.mybatis.demo.mapper.SysUserMapper">
+    <cache/>
+
+    <resultMap id="userInfoResult" type="SysUser">
+        <id column="id" property="id"/>
+        <result property="username" column="user_name"/>
+        <result property="password" column="user_password"/>
+        <result property="email" column="user_email"/>
+        <result property="headImg" column="user_info"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <resultMap id="userInfoWithRoleResult" type="SysUser">
+        <id property="id" column="id"/>
+        <result property="username" column="user_name"/>
+        <result property="password" column="user_password"/>
+        <result property="email" column="user_email"/>
+        <result property="headImg" column="user_info"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+
+        <collection property="roles" columnPrefix="role_" ofType="com.fisher.mybatis.demo.model.SysRole">
+            <id property="id" column="id"/>
+            <result property="roleName" column="role_name"/>
+            <result property="enable" column="enabled"/>
+            <result property="createTime" column="create_time"/>
+        </collection>
+
+        <collection property="permissionList" columnPrefix="p_" ofType="com.fisher.mybatis.demo.model.SysPermission">
+            <id property="id" column="id"/>
+            <result property="permissionName" column="permission_name"/>
+            <result property="permissionUrl" column="permission_url"/>
+        </collection>
+    </resultMap>
+
+    <select id="selectAll" resultMap="userInfoWithRoleResult">
+        SELECT
+            su.id,
+            su.user_name,
+            su.user_email,
+            su.create_time,
+            sr.id as role_id,
+            sr.role_name as role_role_name,
+            sr.enable as role_enabled,
+            sp.id as p_id,
+            sp.permission_name as p_permission_name,
+            sp.permission_url as p_permission_url
+            FROM sys_user su
+               INNER JOIN sys_user_role sur ON su.id = sur.user_id
+               INNER JOIN sys_role sr ON sur.role_id = sr.id
+               INNER JOIN sys_role_permission srp ON sr.id = srp.role_id
+               INNER JOIN sys_permission sp ON srp.permission_id = sp.id;
+    </select>
+
+
+
+    <insert id="insertSysUser" keyProperty="id" useGeneratedKeys="true">
+        INSERT INTO sys_user(
+                user_name,
+                user_password,
+                user_email,
+                user_info,
+                create_time)
+                VALUES (#{username}, #{password}, #{email}, #{headImg, jdbcType=BLOB}, #{createTime, jdbcType=TIMESTAMP});
+
+    </insert>
+
+    <update id="updateSysUserInfo">
+        UPDATE  sys_user su
+            SET
+                <if test="username != null and username != '' ">
+                    su.user_name = #{username},
+                </if>
+                <if test="password != null and password != '' ">
+                    su.user_password = #{password},
+                </if>
+                <if test="email != null and email != '' ">
+                    su.user_email = #{email},
+                </if>
+                <if test="headImg != null">
+                    su.user_info = #{headImg},
+                </if>
+                <if test="createTime != null">
+                    su.create_time = #{createTime, jdbcType=TIMESTAMP},
+                </if>
+                id = #{id}
+                WHERE id = #{id}
+    </update>
+
+    <delete id="deleteSysUser">
+        DELETE FROM sys_user WHERE id = #{id};
+    </delete>
+
+
+    <select id="selectById" resultMap="userInfoWithRoleResult">
+        SELECT
+            su.id,
+            su.user_name,
+            su.user_email,
+            su.create_time,
+            sr.id as role_id,
+            sr.role_name as role_role_name,
+            sr.enable as role_enabled
+            FROM sys_user su
+               LEFT JOIN sys_user_role sur ON su.id = sur.user_id
+               LEFT JOIN sys_role sr ON sur.role_id = sr.id
+            WHERE su.id = #{id};
+    </select>
+
+
+
+    <select id="selectUserByCondition" resultMap="userInfoResult">
+        SELECT * FROM sys_user su
+            WHERE 1 = 1
+            <if test="username != null and username !='' ">
+               AND su.user_name LIKE CONCAT('%', #{username}, '%')
+            </if>
+            <if test="email != null and email != '' ">
+                AND su.user_email = #{email};
+            </if>
+    </select>
+
+
+    <select id="selectSysUserByIdOrName" resultMap="userInfoResult">
+        SELECT * FROM  sys_user
+            WHERE 1 =1
+                <choose>
+                    <when test="id != null">
+                        AND id = #{id}
+                    </when>
+                    <when test="username != null and username != '' ">
+                        AND username = #{username}
+                    </when>
+                    <otherwise>
+                        AND 1 = 2
+                    </otherwise>
+                </choose>
+    </select>
+
+    <select id="selectUserByCondition1" resultMap="userInfoResult">
+        SELECT * FROM  sys_user su
+        <where>
+            <if test="username != null and username !='' ">
+                AND su.user_name LIKE CONCAT('%', #{username}, '%')
+            </if>
+            <if test="email != null and email != '' ">
+                AND su.user_email = #{email};
+            </if>
+        </where>
+    </select>
+
+
+    <select id="selectUserInIds" resultMap="userInfoResult">
+        SELECT * FROM  sys_user WHERE id in
+            <foreach collection="list" open="(" separator="," close=")" item="id">
+                #{id}
+            </foreach>
+    </select>
+
+
+</mapper>
