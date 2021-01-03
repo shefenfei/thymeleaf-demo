@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.fisher.starter.autoconfig.service.HelloAutoConfiguration

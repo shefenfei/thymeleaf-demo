@@ -1,0 +1,19 @@
+server:
+  port: 9999
+spring:
+  application:
+    name: only-school-c
+  security:
+    user:
+      name: root
+      password: 123456
+  cloud:
+    gateway:
+      routes:
+        - id: eas-route
+          uri: http://10.10.10.41:8088/online-backend
+          predicates:
+            - Path=/lesson/**
+logging:
+  level:
+    root: debug

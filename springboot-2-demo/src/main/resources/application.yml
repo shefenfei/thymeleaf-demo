@@ -1,2 +1,22 @@
-server:
-  port: 9999
+#server:
+#  port: 9999
+#
+#spring:
+#  mvc:
+#    async:
+#      request-timeout: 5000
+#
+#
+#person:
+#  name: shefenfei
+#  age: 30
+#  maps:
+#    k1: v1,
+#    k2: v2
+#  list:
+#    - item1
+#    - item2
+#    - item3
+#  dogs:
+#    name: gg1
+#    age: 1

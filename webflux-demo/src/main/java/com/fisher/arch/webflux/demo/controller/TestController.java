@@ -11,6 +11,10 @@ import com.fisher.arch.webflux.demo.service.FruitFactory;
 import com.fisher.arch.webflux.demo.service.impl.AppleFactory;
 import com.fisher.arch.webflux.demo.service.impl.AppleSellServiceImpl;
 import com.fisher.arch.webflux.demo.service.impl.BananaFactory;
+import org.apache.kafka.clients.producer.KafkaProducer;
+import org.apache.kafka.clients.producer.ProducerConfig;
+import org.apache.kafka.clients.producer.ProducerRecord;
+import org.apache.kafka.common.serialization.StringSerializer;
 import org.kie.api.io.ResourceType;
 import org.kie.internal.KnowledgeBase;
 import org.kie.internal.KnowledgeBaseFactory;
@@ -53,14 +57,22 @@ public class TestController {
     @GetMapping("/findOne")
     public Mono<String> findOne() {
         demoService.printMessage();
-        return Mono.just("hello from webflux");
+        return Mono.just("{}");
+    }
+
+    @GetMapping("/testOne")
+    public Mono<String> testOne() {
+        return Mono.just("{\n" +
+                "  \"success\": true,\n" +
+                "  \"message\": \"hahha\"\n" +
+                "}");
     }
 
 
     @GetMapping("/getResult")
     public Mono<String> getResult() {
         futureResult = demoService.asyncMethodWithReturnType();
-        return Mono.just("hello from webflux");
+        return Mono.just("");
     }
 
 
@@ -153,6 +165,16 @@ public class TestController {
     public Mono<String> testSaveHash() {
         LOGGER.info("开始存储hash");
         demoService.saveHash();
+        return Mono.just("jo");
+    }
+
+    @PostMapping("/testGetHash")
+    public Mono<String> testGetHash() {
+        LOGGER.info("开始获取hash");
+        demoService.getHash();
+
+
+
         return Mono.just("jo");
     }
 
@@ -259,6 +281,63 @@ public class TestController {
             int i = blockingQueue.take();
             System.out.println(i);
         }
+    }
+
+    @GetMapping("/sendMessage")
+    public Mono<String> sendMessage() {
+        HashMap<String, Object> paramsConfig = new HashMap<>();
+        paramsConfig.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
+        paramsConfig.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
+        paramsConfig.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
+        paramsConfig.put(ProducerConfig.RETRIES_CONFIG, 3);
+        KafkaProducer<String, String> kafkaProducer = new KafkaProducer<>(paramsConfig);
+        String json = "{\n" +
+                "    \"ext\": \"{}\",\n" +
+                "    \"extObject\": {},\n" +
+                "    \"isRefundFlag\": 0,\n" +
+                "    \"memberId\": \"15000000384802799\",\n" +
+                "    \"orderAmt\": 33,\n" +
+                "    \"orderNo\": \"1190120626191794176\",\n" +
+                "    \"orderPayNo\": \"3190120626661507072\",\n" +
+                "    \"orderSrc\": 1001,\n" +
+                "    \"orderStatus\": 40,\n" +
+                "    \"orderTradeTime\": \"2019-11-07 15:11:29\",\n" +
+                "    \"orderType\": \"checkout_order\",\n" +
+                "    \"parkId\": \"100000204\",\n" +
+                "    \"phoneNo\": \"18595756643\",\n" +
+                "    \"plazaId\": \"1000274\",\n" +
+                "    \"plazaName\": \"上海周浦万达广场\",\n" +
+                "    \"productInfo\": [\n" +
+                "        {\n" +
+                "            \"id\": 8756,\n" +
+                "            \"memberId\": \"15000000384802799\",\n" +
+                "            \"orderNo\": \"1190120626191794176\",\n" +
+                "            \"productCode\": \"13769\",\n" +
+                "            \"productCount\": 1,\n" +
+                "            \"productExt\": \"{\\\"recordId\\\":\\\"16549048-093B-473F-9713-FDB5E3B52BB7\\\",\\\"serviceFee\\\":10,\\\"entryTime\\\":\\\"20191107112200\\\",\\\"fpType\\\":\\\"WXV\\\",\\\"staySecond\\\":13769,\\\"serviceFeeEnabled\\\":true,\\\"plateNumber\\\":\\\"沪T00122\\\",\\\"sp\\\":\\\"ETCP\\\"}\",\n" +
+                "            \"productPrice\": 33,\n" +
+                "            \"productSalePrice\": 33,\n" +
+                "            \"productType\": \"park\",\n" +
+                "            \"tenantId\": \"2018092600001\",\n" +
+                "            \"title\": \"ETCP停车费\",\n" +
+                "            \"version\": 0\n" +
+                "        }\n" +
+                "    ],\n" +
+                "    \"realPayAmt\": 33,\n" +
+                "    \"storeId\": \"100000204\",\n" +
+                "    \"storeName\": \"周浦万达停车场测试名称有点长(勿动)\",\n" +
+                "    \"tenantId\": \"2018092600001\",\n" +
+                "    \"thirdPartNo\": \"ETCP_p1573110689377009001001886212920\",\n" +
+                "    \"timeout\": 0,\n" +
+                "    \"updateTime\": \"2019-11-07 15:11:30\",\n" +
+                "    \"version\": 1\n" +
+                "}";
+        ProducerRecord<String, String> producerRecord = new ProducerRecord<>("trade-order", json);
+        kafkaProducer.send(producerRecord, ((recordMetadata, e) -> {
+            LOGGER.info("recordData: {}", recordMetadata);
+        }));
+
+        return Mono.just("{}");
     }
 
 }

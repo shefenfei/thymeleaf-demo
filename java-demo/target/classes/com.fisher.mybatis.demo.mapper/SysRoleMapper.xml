@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fisher.mybatis.demo.mapper.SysRoleMapper">
+    <resultMap id="sysRoleResult" type="SysRole">
+        <id property="id" column="id"/>
+        <result property="roleName" column="role_name"/>
+        <result property="enable" column="enable"/>
+        <result property="createBy" column="create_by"/>
+        <result property="createTime" column="create_time"/>
+
+        <!--   user的相关属性     -->
+        <result property="user.id" column="uid"/>
+        <result property="user.username" column="user_name"/>
+        <result property="user.password" column="user_password"/>
+        <result property="user.email" column="user_email"/>
+    </resultMap>
+
+    <!-- 用继承关系实现-->
+    <resultMap id="sysUserInfoResult" type="SysUser" >
+        <id property="id" column="uid"/>
+        <result property="username" column="user_name"/>
+        <result property="password" column="user_password"/>
+        <result property="email" column="user_email"/>
+    </resultMap>
+
+
+    <select id="selectUserRoleById" resultMap="sysRoleResult">
+        SELECT
+            r.role_name,
+            r.enable,
+            r.create_time,
+            u.user_name "user.username",
+            u.user_email "user.email"
+                FROM sys_user u
+                    INNER JOIN sys_user_role sr ON sr.user_id = u.id
+                    INNER JOIN sys_role r ON r.id = sr.role_id
+                        WHERE u.id = #{id};
+    </select>
+
+
+
+
+    <select id="selectUserRoleById1" resultMap="sysRoleResult">
+        SELECT
+            r.role_name,
+            r.enable,
+            r.create_time,
+            u.id as uid,
+            u.user_name as user_name,
+            u.user_email as user_email
+                FROM sys_user u
+                    INNER JOIN sys_user_role sr ON sr.user_id = u.id
+                    INNER JOIN sys_role r ON r.id = sr.role_id
+                        WHERE u.id = #{id};
+    </select>
+
+
+
+    <select id="selectUserRoleById2" resultType="com.fisher.mybatis.demo.model.SysRole">
+
+    </select>
+    <select id="selectUserRoleById3" resultType="com.fisher.mybatis.demo.model.SysRole">
+
+    </select>
+
+</mapper>

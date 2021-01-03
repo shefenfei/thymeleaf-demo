@@ -1,0 +1,43 @@
+@startuml
+!include <cloudinsight/tomcat>
+!include <cloudinsight/kafka>
+!include <cloudinsight/java>
+!include <cloudinsight/cassandra>
+
+
+[会员模块] -> [MOT 系统]: request
+
+
+() "用户接口"
+() "抽奖接口"
+
+DataAccess - [会员模块] : request
+
+[会员模块] ..> http: use
+
+package "some group1" {
+    [事件模块]
+    [场景模块]
+    [任务模块]
+}
+
+node "Other Groups " {
+    kafka -> [事件模块]
+}
+
+
+cloud {
+    [example 1]
+}
+
+database "Mysql" {
+    folder "db" {
+        [Folder 2]
+    }
+}
+
+
+rectangle "<$tomcat>\nwebapp" as webapp
+rectangle "<$java>\ndaemon" as Java
+database "<$cassandra>" as cassandra
+@enduml

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <settings>
+        <setting name="logImpl" value="LOG4J"/>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <!-- 开启二级缓存 -->
+        <setting name="cacheEnabled" value="true"/>
+    </settings>
+
+
+    
+    <typeAliases>
+        <package name="com.fisher.mybatis.demo.model"/>
+    </typeAliases>
+
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC">
+                <property name="" value=""/>
+            </transactionManager>
+            <dataSource type="UNPOOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/test_db?serverTimezone=Asia/Shanghai"/>
+                <property name="username" value="root"/>
+                <property name="password" value="123456"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+
+    <mappers>
+        <mapper resource="com.fisher.mybatis.demo.mapper/CountryMapper.xml"/>
+        <mapper resource="com.fisher.mybatis.demo.mapper/SysPermissionMapper.xml"/>
+        <mapper resource="com.fisher.mybatis.demo.mapper/SysRoleMapper.xml"/>
+        <mapper resource="com.fisher.mybatis.demo.mapper/SysRolePermissionMapper.xml"/>
+        <mapper resource="com.fisher.mybatis.demo.mapper/SysUserMapper.xml"/>
+        <mapper resource="com.fisher.mybatis.demo.mapper/SysUserRoleMapper.xml"/>
+    </mappers>
+</configuration>

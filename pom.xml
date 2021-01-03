@@ -26,7 +26,8 @@
 		<module>thymeleaf-model</module>
 		<module>thymeleaf-common</module>
 		<module>bytebuddy-demo</module>
-  </modules>
+        <module>mybatis-plus-mbg</module>
+    </modules>
 
 	<!--属性配置-->
 	<properties>

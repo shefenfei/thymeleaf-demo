@@ -1,0 +1,40 @@
+server:
+  port: 10000
+
+spring:
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/thymeleaf?useSSL=true&useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&zeroDateTimeBehavior=convertToNull
+#    password: 123456
+#    username: root
+#    driver-class-name: com.mysql.jdbc.Driver
+#    type: com.alibaba.druid.pool.DruidDataSource
+
+  shardingsphere:
+    datasource:
+      names: master, slave01
+      master:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/master_db
+        username: root
+        password: 123456
+      slave01:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/slave_db_01
+        username: root
+        password: 123456
+    masterslave:
+      name: master-slave
+      master-data-source-name: master
+      slave-data-source-names: slave01
+      props:
+        sql:
+          show: true
+
+mybatis-plus:
+  mapper-locations: /xml/*.xml
+debug: false
+logging:
+  level:
+    root: INFO

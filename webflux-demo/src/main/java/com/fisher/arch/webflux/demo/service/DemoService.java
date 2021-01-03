@@ -16,4 +16,6 @@ public interface DemoService {
 
 
     void saveHash();
+
+    void getHash();
 }

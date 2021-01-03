@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>success</title>
+    <script src="webjars/jquery/3.4.1/jquery.min.js"></script>
+    <script type="application/javascript">
+        function deleteUser(id) {
+            console.info(id);
+        }
+    </script>
+</head>
+<body>
+成功！
+<div th:text="${hello}" th:id="${hello}"></div>
+    <div>
+        <table>
+            <tr>
+                <td>id</td>
+                <td>名字</td>
+                <td>地址</td>
+                <td>电话</td>
+                <td>操作</td>
+            </tr>
+            <tr th:each="user: ${users}">
+                <td th:text="${user.id}">1</td>
+                <td th:text="${user.name}"></td>
+                <td th:text="${user.address}"></td>
+                <td th:text="${user.phone}"></td>
+                <td>
+                    <a href="#" th:href="@{/delete/${user.id}}" th:if="${user.id == 0}">删除</a>
+                    <a href="#" th:href="@{/update/${user.id}}" th:if="${user.id == 1}">编辑</a>
+                    <a href="#"  th:if="${user.id == 0}">编辑1</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

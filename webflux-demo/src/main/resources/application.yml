@@ -12,5 +12,13 @@ custom:
 spring:
   profiles:
     active: dev
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: webflux-01
+    producer:
+      bootstrap-servers: localhost:9092
+      batch-size: 1
 logging:
   config: classpath:logback-spring.xml
+

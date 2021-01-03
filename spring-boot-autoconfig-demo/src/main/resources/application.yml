@@ -1,0 +1,19 @@
+spring:
+  http:
+    encoding:
+      charset: utf-8
+      force: true
+      force-request: true
+
+debug: true
+server:
+  port: 9900
+
+logging:
+  level:
+    com.fisher.springboot.autoconfig: trace
+    com.fisher.springboot.autoconfig.service: info
+  pattern:
+    console: "%d{yyyy-MM-dd} - [%thread] - %-5level -%logger{20} - %msg%n"
+  file: mylog.log
+  path: /var/xxx/yyy

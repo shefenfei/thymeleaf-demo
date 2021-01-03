@@ -1,0 +1,12 @@
+debug: true
+spring:
+  thymeleaf:
+    cache: false
+
+fisher:
+  hello:
+    name: shefenfei
+    prefix: from
+    suffix: hello world !
+server:
+  port: 9090
