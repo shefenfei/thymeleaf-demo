@@ -1,19 +1,12 @@
 package com.fisher.demo.gateway.config;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
-import org.springframework.security.config.web.server.ServerHttpSecurity;
-import org.springframework.security.web.server.SecurityWebFilterChain;
-import org.springframework.web.cors.CorsConfiguration;
-
-@Configuration
-@EnableWebFluxSecurity
+//@Configuration
+//@EnableWebFluxSecurity
 public class GatewaySecurityConfig {
 
 
-    private static final String[] excludePaths = {"/lesson/**", "/login?error"};
-
+    private static final String[] excludePaths = {"/lesson/**", "/demo/getDict", "/demo/save1"};
+/*
     @Bean
     public SecurityWebFilterChain securityWebFilterChain(ServerHttpSecurity httpSecurity) {
         httpSecurity.authorizeExchange()
@@ -31,5 +24,16 @@ public class GatewaySecurityConfig {
 //                .exceptionHandling().authenticationEntryPoint(new CustomServerAuthenticationEntryPoint("/login"));
         return httpSecurity.build();
     }
+
+    private String[] buildExcludePaths(String[] excludePaths) {
+        ArrayList<String> paths = new ArrayList<>();
+        if (excludePaths.length == 0) {
+            return new String[]{};
+        }
+        for (String excludePath : excludePaths) {
+            paths.add("/school" + excludePath);
+        }
+        return paths.toArray(new String[0]);
+    }*/
 
 }

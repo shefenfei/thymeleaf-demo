@@ -10,10 +10,18 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: eas-route
-          uri: http://10.10.10.41:8088/online-backend
+        - id: prepath-route
+          uri: http://localhost:9999
           predicates:
-            - Path=/lesson/**
+            - Path=/school/**
+          filters:
+            - StripPrefix=1
+        - id: eas-route
+          uri: http://10.10.10.41:10000/crm-backend
+          predicates:
+            - Path=/demo/**
+          filters:
+            - PrefixPath=/crm-backend
 logging:
   level:
     root: debug
